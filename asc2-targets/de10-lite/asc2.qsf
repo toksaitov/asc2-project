@@ -1,0 +1,198 @@
+#============================================================
+# Almurut II on the Terasic DE10-Lite (MAX 10 10M50DAF484C7G)
+#============================================================
+
+set_global_assignment -name FAMILY "MAX 10 FPGA"
+set_global_assignment -name DEVICE 10M50DAF484C7G
+set_global_assignment -name TOP_LEVEL_ENTITY "asc2"
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "16.0.0"
+set_global_assignment -name LAST_QUARTUS_VERSION "24.1std.0 Lite Edition"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:35:32 OCTOBER 30,2025"
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 484
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 7
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY build
+set_global_assignment -name SDC_FILE asc2.sdc
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 4
+
+# A pin without a job is an input with a weak pull-up
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED WITH WEAK PULL-UP"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+
+source files.qsf
+
+#============================================================
+# The clock of the board, and the clock of the chip behind the
+# slide switch that chooses it.
+#============================================================
+
+set_location_assignment PIN_P11 -to clk50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk50
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to clk
+
+#============================================================
+# The wires to the Pico, on the 40-pin header of the board (JP1), in the
+# places of the bench memory test.
+# Inputs have Schmitt triggers; outputs drive 4 mA.
+#============================================================
+
+set_location_assignment PIN_W10 -to pi_rst_n
+set_instance_assignment -name IO_STANDARD "3.3 V Schmitt Trigger" -to pi_rst_n
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to pi_rst_n
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to pi_rst_n
+set_location_assignment PIN_W9 -to pi_clk
+set_instance_assignment -name IO_STANDARD "3.3 V Schmitt Trigger" -to pi_clk
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to pi_clk
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to pi_clk
+set_location_assignment PIN_W7 -to uio[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uio[0]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to uio[0]
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to uio[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to uio[0]
+set_location_assignment PIN_V5 -to uio[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uio[1]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to uio[1]
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to uio[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to uio[1]
+set_location_assignment PIN_AA15 -to uio[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uio[2]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to uio[2]
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to uio[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to uio[2]
+set_location_assignment PIN_W13 -to uio[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uio[3]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to uio[3]
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to uio[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to uio[3]
+set_location_assignment PIN_AB13 -to uio[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uio[4]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to uio[4]
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to uio[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to uio[4]
+set_location_assignment PIN_Y11 -to uio[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uio[5]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to uio[5]
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to uio[5]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to uio[5]
+set_location_assignment PIN_W11 -to uio[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uio[6]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to uio[6]
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to uio[6]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to uio[6]
+set_location_assignment PIN_AA10 -to uio[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uio[7]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to uio[7]
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to uio[7]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to uio[7]
+set_location_assignment PIN_Y7 -to req
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to req
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to req
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to req
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to req
+set_location_assignment PIN_Y6 -to pi_ack
+set_instance_assignment -name IO_STANDARD "3.3 V Schmitt Trigger" -to pi_ack
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to pi_ack
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to pi_ack
+set_location_assignment PIN_Y5 -to pi_irq
+set_instance_assignment -name IO_STANDARD "3.3 V Schmitt Trigger" -to pi_irq
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to pi_irq
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to pi_irq
+set_location_assignment PIN_Y4 -to pi_stop
+set_instance_assignment -name IO_STANDARD "3.3 V Schmitt Trigger" -to pi_stop
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to pi_stop
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to pi_stop
+set_location_assignment PIN_Y3 -to pi_drives
+set_instance_assignment -name IO_STANDARD "3.3 V Schmitt Trigger" -to pi_drives
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to pi_drives
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to pi_drives
+set_location_assignment PIN_AA2 -to chip_drives
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to chip_drives
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to chip_drives
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to chip_drives
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to chip_drives
+
+#============================================================
+# The two lines of the keyboard, on the two pins of the same row of the
+# header that the bench memory test left free (pins 6 and 26 of JP1).
+# Each has a weak pull-up: a pin without its wire reads high, which is a
+# keyboard that sends nothing.
+#============================================================
+
+set_location_assignment PIN_W8 -to kbd_clk
+set_instance_assignment -name IO_STANDARD "3.3 V Schmitt Trigger" -to kbd_clk
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to kbd_clk
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to kbd_clk
+set_location_assignment PIN_Y8 -to kbd_data
+set_instance_assignment -name IO_STANDARD "3.3 V Schmitt Trigger" -to kbd_data
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to kbd_data
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to kbd_data
+
+#============================================================
+# The three wires of the debug port, on the other row of the header: its
+# first three pins (pins 1, 3, and 5 of JP1). The two inputs have weak
+# pull-ups: without its wire the clock of the port never rises.
+#============================================================
+
+set_location_assignment PIN_V10 -to pi_dbg_ck
+set_instance_assignment -name IO_STANDARD "3.3 V Schmitt Trigger" -to pi_dbg_ck
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to pi_dbg_ck
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to pi_dbg_ck
+set_location_assignment PIN_V9 -to pi_dbg_di
+set_instance_assignment -name IO_STANDARD "3.3 V Schmitt Trigger" -to pi_dbg_di
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to pi_dbg_di
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to pi_dbg_di
+set_location_assignment PIN_V8 -to dbg_do
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to dbg_do
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to dbg_do
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to dbg_do
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to dbg_do
+
+#============================================================
+# LED
+#============================================================
+
+set_location_assignment PIN_A8 -to LEDR[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[0]
+set_location_assignment PIN_A9 -to LEDR[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[1]
+set_location_assignment PIN_A10 -to LEDR[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[2]
+set_location_assignment PIN_B10 -to LEDR[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[3]
+set_location_assignment PIN_D13 -to LEDR[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[4]
+set_location_assignment PIN_C13 -to LEDR[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[5]
+set_location_assignment PIN_E14 -to LEDR[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[6]
+set_location_assignment PIN_D14 -to LEDR[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[7]
+set_location_assignment PIN_A11 -to LEDR[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[8]
+set_location_assignment PIN_B11 -to LEDR[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[9]
+
+#============================================================
+# SW
+#============================================================
+
+set_location_assignment PIN_C10 -to SW[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[0]
+set_location_assignment PIN_C11 -to SW[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[1]
+set_location_assignment PIN_D12 -to SW[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[2]
+set_location_assignment PIN_C12 -to SW[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[3]
+set_location_assignment PIN_A12 -to SW[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[4]
+set_location_assignment PIN_B12 -to SW[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[5]
+set_location_assignment PIN_A13 -to SW[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[6]
+set_location_assignment PIN_A14 -to SW[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[7]
+set_location_assignment PIN_B14 -to SW[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[8]
+set_location_assignment PIN_F15 -to SW[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[9]

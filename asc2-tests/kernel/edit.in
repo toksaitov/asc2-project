@@ -1,0 +1,36 @@
+ed note
+a
+first line
+second line
+third line
+.
+,n
+2
+s/second/2nd/
+1,$s/line/row/g
+,p
+2d
+,n
+1i
+at the top
+.
+$a
+at the end
+.
+,n
+=
+3c
+changed
+.
+,p
+q
+w
+q
+cat note
+ed note
+,n
+9p
+xyz
+h
+Q
+exit

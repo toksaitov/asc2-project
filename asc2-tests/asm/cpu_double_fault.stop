@@ -1,0 +1,1 @@
+The CPU stopped with a double fault at ip 0x80800044: cr1 0x80800034, cr2 0x80010001, cr4 0x0f, cr5 0x00000002

@@ -1,0 +1,168 @@
+--- a/libtcc.c
++++ b/libtcc.c
+@@ -60,6 +60,10 @@
+ #include "c67-link.c"
+ #include "tcccoff.c"
+ #endif
++#ifdef TCC_TARGET_ASC2
++#include "asc2-gen.c"
++#include "asc2-link.c"
++#endif
+ #ifdef TCC_TARGET_X86_64
+ #include "x86_64-gen.c"
+ #include "x86_64-link.c"
+@@ -806,6 +810,10 @@
+     tcc_define_symbol(s, "__aarch64__", NULL);
+ #elif defined TCC_TARGET_C67
+     tcc_define_symbol(s, "__C67__", NULL);
++#elif defined TCC_TARGET_ASC2
++    tcc_define_symbol(s, "__asc2__", NULL);
++    /* the machine has no dynamic linker */
++    s->static_link = 1;
+ #endif
+ 
+ #ifdef TCC_TARGET_PE
+@@ -1341,6 +1349,9 @@
+                 || link_option(option, "Ttext=", &p)) {
+             s->text_addr = strtoull(p, &end, 16);
+             s->has_text_addr = 1;
++        } else if (link_option(option, "Tdata=", &p)) {
++            s->data_addr = strtoull(p, &end, 16);
++            s->has_data_addr = 1;
+         } else if (link_option(option, "init=", &p)) {
+             copy_linker_arg(&s->init_symbol, p, 0);
+             ignoring = 1;
+--- a/tcc.c
++++ b/tcc.c
+@@ -148,6 +148,8 @@
+         "x86_64"
+ #elif defined TCC_TARGET_C67
+         "C67"
++#elif defined TCC_TARGET_ASC2
++        "Almurut II"
+ #elif defined TCC_TARGET_ARM
+         "ARM"
+ #elif defined TCC_TARGET_ARM64
+--- a/tcc.h
++++ b/tcc.h
+@@ -128,11 +128,12 @@
+ /* #define TCC_TARGET_ARM    *//* ARMv4 code generator */
+ /* #define TCC_TARGET_ARM64  *//* ARMv8 code generator */
+ /* #define TCC_TARGET_C67    *//* TMS320C67xx code generator */
++/* #define TCC_TARGET_ASC2   *//* Almurut II code generator */
+ 
+ /* default target is I386 */
+ #if !defined(TCC_TARGET_I386) && !defined(TCC_TARGET_ARM) && \
+     !defined(TCC_TARGET_ARM64) && !defined(TCC_TARGET_C67) && \
+-    !defined(TCC_TARGET_X86_64)
++    !defined(TCC_TARGET_X86_64) && !defined(TCC_TARGET_ASC2)
+ # if defined __x86_64__ || defined _AMD64_
+ #  define TCC_TARGET_X86_64
+ # elif defined __arm__
+@@ -334,6 +335,10 @@
+ # include "coff.h"
+ # include "c67-gen.c"
+ # include "c67-link.c"
++#endif
++#ifdef TCC_TARGET_ASC2
++# include "asc2-gen.c"
++# include "asc2-link.c"
+ #endif
+ #undef TARGET_DEFS_ONLY
+ 
+@@ -343,13 +348,19 @@
+ # define ELFCLASSW ELFCLASS64
+ # define ElfW(type) Elf##64##_##type
+ # define ELFW(type) ELF##64##_##type
+-# define ElfW_Rel ElfW(Rela)
+-# define SHT_RELX SHT_RELA
+-# define REL_SECTION_FMT ".rela%s"
+ #else
+ # define ELFCLASSW ELFCLASS32
+ # define ElfW(type) Elf##32##_##type
+ # define ELFW(type) ELF##32##_##type
++#endif
++/* A relocation record of Almurut II carries its addend, as on the 64-bit
++   targets: the 16-bit immediate field of an instruction has no room for
++   the addend of a 32-bit address. */
++#if PTR_SIZE == 8 || defined TCC_TARGET_ASC2
++# define ElfW_Rel ElfW(Rela)
++# define SHT_RELX SHT_RELA
++# define REL_SECTION_FMT ".rela%s"
++#else
+ # define ElfW_Rel ElfW(Rel)
+ # define SHT_RELX SHT_REL
+ # define REL_SECTION_FMT ".rel%s"
+@@ -686,6 +697,8 @@
+ 
+     addr_t text_addr; /* address of text section */
+     int has_text_addr;
++    addr_t data_addr; /* address of the first writable section (-Wl,-Tdata=) */
++    int has_data_addr;
+ 
+     unsigned section_align; /* section alignment */
+ 
+--- a/tccelf.c
++++ b/tccelf.c
+@@ -1708,7 +1708,13 @@
+             ph->p_memsz = addr - ph->p_vaddr;
+             ph++;
+             if (j == 0) {
+-                if (s1->output_format == TCC_OUTPUT_FORMAT_ELF) {
++                if (s1->has_data_addr) {
++                    /* the writable sections start at the address given
++                       with -Wl,-Tdata=, each at a file offset that equals
++                       its address within a page */
++                    addr = s1->data_addr;
++                    file_offset += (unsigned)(addr - file_offset) & (s_align - 1);
++                } else if (s1->output_format == TCC_OUTPUT_FORMAT_ELF) {
+                     /* if in the middle of a page, we duplicate the page in
+                        memory so that one copy is RX and the other is RW */
+                     if ((addr & (s_align - 1)) != 0)
+--- a/tccgen.c
++++ b/tccgen.c
+@@ -6516,7 +6516,7 @@
+ 				   c + rel->r_offset - esym->st_value,
+ 				   ELFW(R_TYPE)(rel->r_info),
+ 				   ELFW(R_SYM)(rel->r_info),
+-#if PTR_SIZE == 8
++#if SHT_RELX == SHT_RELA
+ 				   rel->r_addend
+ #else
+ 				   0
+@@ -6589,7 +6589,7 @@
+ 	    case VT_PTR:
+ 		{
+ 		    addr_t val = vtop->c.i;
+-#if PTR_SIZE == 8
++#if SHT_RELX == SHT_RELA
+ 		    if (vtop->r & VT_SYM)
+ 		      greloca(sec, vtop->sym, c, R_DATA_PTR, val);
+ 		    else
+@@ -6604,7 +6604,7 @@
+ 	    default:
+ 		{
+ 		    int val = vtop->c.i;
+-#if PTR_SIZE == 8
++#if SHT_RELX == SHT_RELA
+ 		    if (vtop->r & VT_SYM)
+ 		      greloca(sec, vtop->sym, c, R_DATA_PTR, val);
+ 		    else
+--- a/tcctok.h
++++ b/tcctok.h
+@@ -232,6 +232,15 @@
+ # endif
+ #endif
+ 
++#if defined TCC_TARGET_ASC2
++     /* the machine divides in software and multiplies to 32 bits only */
++     DEF(TOK___modsi3, "__modsi3")
++     DEF(TOK___umodsi3, "__umodsi3")
++     DEF(TOK___divsi3, "__divsi3")
++     DEF(TOK___udivsi3, "__udivsi3")
++     DEF(TOK___umulsidi3, "__umulsidi3")
++#endif
++
+ #if defined TCC_TARGET_C67
+      DEF(TOK__divi, "_divi")
+      DEF(TOK__divu, "_divu")

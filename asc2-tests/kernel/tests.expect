@@ -1,0 +1,119 @@
+Rach2 for Almurut II
+192 KB RAM, 176 free
+$ work
+the variables have their values
+the new pages of the stack keep their bytes
+the kernel refuses wrong requests
+the kernel writes a buffer that lies on the border of two pages
+a line from a buffer on two pages
+the kernel reads such a buffer
+the registers keep their values
+the timer has interrupted the work, and the sum is right
+a child has done the same work at the same time
+the two processes took turns
+$ crash
+a child writes to the address 0
+Process 5 is stopped: page fault at 0x00000000 (ip 0x004000d0)
+the kernel has stopped the child
+a child writes into its code
+Process 6 is stopped: page fault at 0x00400194 (ip 0x00400104)
+the kernel has stopped the child
+a child calls the kernel as a function
+Process 7 is stopped: bus error at 0x80800000 (ip 0x80800000)
+the kernel has stopped the child
+a child turns interrupts off
+Process 8 is stopped: privileged instruction (ip 0x004006a4)
+the kernel has stopped the child
+a child enters the kernel with a number that the kernel does not use
+Process 9 is stopped: unknown number of an int instruction (ip 0x004006b0)
+the kernel has stopped the child
+$ forks
+a child has a copy of the memory, and a number of its own
+the parent gets the exit code of a child
+an exit code is one byte
+a wait for any child takes the child that ends first
+a wait for a process that is not a child is refused
+fork fails when the machine is full, and the processes before it end well
+a second chain is as long as the first
+a process may end before its children
+$ execs
+the kernel refuses to start what it cannot start
+the kernel refuses programs with wrong headers
+4 arguments
+argument 0: [args]
+argument 1: [one]
+argument 2: []
+argument 3: [three]
+variable 0: [HOME=/]
+variable 1: [EMPTY=]
+a program gets its arguments and its environment
+0 arguments
+a program may have no arguments
+a program may have as many arguments as the kernel takes
+$ files
+a file keeps the bytes that were written to it
+a file is read and written at any position
+the flags of open do what they say
+the kernel refuses wrong requests for files
+a descriptor is copied by dup2 and by fork
+a file that grows moves to a larger place, and its open descriptors follow
+files are renamed and removed
+stat and the listing of the directory tell what is on the disk
+two processes write to the disk at the same time
+a file grows until the disk has no room for it, and the bytes come back
+the test files are removed
+$ dots
+dot4 adds four products to a number
+the bytes are signed
+the timer has interrupted the sums of dot4, and they are right
+a child has computed its own sums at the same time
+the two processes took turns in the middle of their sums
+$ array
+a program starts with zeros in the array
+dotv adds twelve products to a number
+xsh moves the inputs on by one cell
+learn moves the weights by the error times the input
+a child has the values of its parent
+the next child has them too, and the parent keeps them: what a child writes is its own
+a program that a process starts has zeros, and the process before it keeps its values
+the timer has interrupted the work with the array, and the sums and the weights are right
+a child has used the array for its own sums at the same time
+the two processes took turns in the middle of their work
+$ load
+five processes of three kinds have done their work
+the kernel tells what the network of its scheduler has learned
+a process sleeps for three periods of the timer
+the kernel refuses a request that it does not know and an address outside the program
+$ screen
+a process without the screen cannot name a picture or give the screen back
+the kernel lends the screen
+a second request of the same process changes nothing
+the frame memory keeps what the program writes
+the clock of the device page runs
+the kernel takes no bytes out of the device page
+the kernel takes a picture
+a picture has a number from 0 to 3
+a picture starts at a multiple of 4
+a picture is not larger than the screen
+a picture is in the memory of the program
+the kernel knows three requests
+the kernel refuses the screen to a second process
+a child touches the screen of its parent
+Process 54 is stopped: page fault at 0x007ef000 (ip 0x00400158)
+the kernel has stopped the child
+the parent still has the screen
+the program gives the screen back
+a child takes the screen and ends with it
+a child takes the screen and writes to the address 0
+Process 56 is stopped: page fault at 0x00000000 (ip 0x00400218)
+the kernel has stopped the child
+the screen is free after both
+$ exit
+The first process has ended with the exit code 0
+The network of the scheduler: dot4 and C gave the same sum every time
+No processes are left: 3 page faults repaired, 0 pages free at the least
+
+Goodbye! The shell
+has ended and the
+machine has stopped.
+Reset it to restart.

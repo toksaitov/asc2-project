@@ -1,0 +1,220 @@
+# Bench Test 4 (memory proof), DE10-Lite side. Loaded over JTAG (.sof) only; the
+# board's configuration flash is never written.
+set_global_assignment -name FAMILY "MAX 10 FPGA"
+set_global_assignment -name DEVICE 10M50DAF484C7G
+set_global_assignment -name TOP_LEVEL_ENTITY bench_mem
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../../ttsky26e-almurut2/src/asc_reset_filter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../../ttsky26e-almurut2/src/asc_irq_filter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../../../../ttsky26e-almurut2/src/asc_bus.sv
+# Bench only: asc_bus's tear test input (the chip is built without it).
+set_global_assignment -name VERILOG_MACRO "ASC_BUS_TEST_TEAR=1"
+set_global_assignment -name SYSTEMVERILOG_FILE dly_line.sv
+set_global_assignment -name SYSTEMVERILOG_FILE bench_mem.sv
+set_global_assignment -name SDC_FILE bench_mem.sdc
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 4
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED WITH WEAK PULL-UP"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+
+# Clock, LEDs and displays, copied from the Terasic DE10_LITE_Golden_Top.qsf.
+set_location_assignment PIN_P11 -to clk50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[7]
+set_location_assignment PIN_C14 -to HEX0[0]
+set_location_assignment PIN_E15 -to HEX0[1]
+set_location_assignment PIN_C15 -to HEX0[2]
+set_location_assignment PIN_C16 -to HEX0[3]
+set_location_assignment PIN_E16 -to HEX0[4]
+set_location_assignment PIN_D17 -to HEX0[5]
+set_location_assignment PIN_C17 -to HEX0[6]
+set_location_assignment PIN_D15 -to HEX0[7]
+set_location_assignment PIN_C18 -to HEX1[0]
+set_location_assignment PIN_D18 -to HEX1[1]
+set_location_assignment PIN_E18 -to HEX1[2]
+set_location_assignment PIN_B16 -to HEX1[3]
+set_location_assignment PIN_A17 -to HEX1[4]
+set_location_assignment PIN_A18 -to HEX1[5]
+set_location_assignment PIN_B17 -to HEX1[6]
+set_location_assignment PIN_A16 -to HEX1[7]
+set_location_assignment PIN_B20 -to HEX2[0]
+set_location_assignment PIN_A20 -to HEX2[1]
+set_location_assignment PIN_B19 -to HEX2[2]
+set_location_assignment PIN_A21 -to HEX2[3]
+set_location_assignment PIN_B21 -to HEX2[4]
+set_location_assignment PIN_C22 -to HEX2[5]
+set_location_assignment PIN_B22 -to HEX2[6]
+set_location_assignment PIN_A19 -to HEX2[7]
+set_location_assignment PIN_F21 -to HEX3[0]
+set_location_assignment PIN_E22 -to HEX3[1]
+set_location_assignment PIN_E21 -to HEX3[2]
+set_location_assignment PIN_C19 -to HEX3[3]
+set_location_assignment PIN_C20 -to HEX3[4]
+set_location_assignment PIN_D19 -to HEX3[5]
+set_location_assignment PIN_E17 -to HEX3[6]
+set_location_assignment PIN_D22 -to HEX3[7]
+set_location_assignment PIN_F18 -to HEX4[0]
+set_location_assignment PIN_E20 -to HEX4[1]
+set_location_assignment PIN_E19 -to HEX4[2]
+set_location_assignment PIN_J18 -to HEX4[3]
+set_location_assignment PIN_H19 -to HEX4[4]
+set_location_assignment PIN_F19 -to HEX4[5]
+set_location_assignment PIN_F20 -to HEX4[6]
+set_location_assignment PIN_F17 -to HEX4[7]
+set_location_assignment PIN_J20 -to HEX5[0]
+set_location_assignment PIN_K20 -to HEX5[1]
+set_location_assignment PIN_L18 -to HEX5[2]
+set_location_assignment PIN_N18 -to HEX5[3]
+set_location_assignment PIN_M20 -to HEX5[4]
+set_location_assignment PIN_N19 -to HEX5[5]
+set_location_assignment PIN_N20 -to HEX5[6]
+set_location_assignment PIN_L19 -to HEX5[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[9]
+set_location_assignment PIN_A8 -to LEDR[0]
+set_location_assignment PIN_A9 -to LEDR[1]
+set_location_assignment PIN_A10 -to LEDR[2]
+set_location_assignment PIN_B10 -to LEDR[3]
+set_location_assignment PIN_D13 -to LEDR[4]
+set_location_assignment PIN_C13 -to LEDR[5]
+set_location_assignment PIN_E14 -to LEDR[6]
+set_location_assignment PIN_D14 -to LEDR[7]
+set_location_assignment PIN_A11 -to LEDR[8]
+set_location_assignment PIN_B11 -to LEDR[9]
+
+# The 16 wired header pins, by port name. Locations are the Terasic
+# GPIO[n] locations for header pins 2, 4, 8 ... 40.
+set_location_assignment PIN_W10 -to pi_rst_n
+set_instance_assignment -name IO_STANDARD "3.3 V Schmitt Trigger" -to pi_rst_n
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to pi_rst_n
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to pi_rst_n
+set_location_assignment PIN_W9 -to pi_clk
+# CLK and the other Pico-driven inputs come over bare jumper wires.
+# Hysteresis keeps ground bounce and crosstalk (simultaneously switching
+# uio outputs, the CLK wire next to RST_N) from making extra clock
+# edges or short reset pulses. uio is bidirectional and stays LVTTL.
+set_instance_assignment -name IO_STANDARD "3.3 V Schmitt Trigger" -to pi_clk
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to pi_clk
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to pi_clk
+set_location_assignment PIN_W7 -to uio[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uio[0]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to uio[0]
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to uio[0]
+set_location_assignment PIN_V5 -to uio[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uio[1]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to uio[1]
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to uio[1]
+set_location_assignment PIN_AA15 -to uio[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uio[2]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to uio[2]
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to uio[2]
+set_location_assignment PIN_W13 -to uio[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uio[3]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to uio[3]
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to uio[3]
+set_location_assignment PIN_AB13 -to uio[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uio[4]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to uio[4]
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to uio[4]
+set_location_assignment PIN_Y11 -to uio[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uio[5]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to uio[5]
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to uio[5]
+set_location_assignment PIN_W11 -to uio[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uio[6]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to uio[6]
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to uio[6]
+set_location_assignment PIN_AA10 -to uio[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to uio[7]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to uio[7]
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to uio[7]
+set_location_assignment PIN_Y7 -to req
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to req
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to req
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to req
+set_location_assignment PIN_Y6 -to pi_ack
+set_instance_assignment -name IO_STANDARD "3.3 V Schmitt Trigger" -to pi_ack
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to pi_ack
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to pi_ack
+set_location_assignment PIN_Y5 -to pi_irq
+set_instance_assignment -name IO_STANDARD "3.3 V Schmitt Trigger" -to pi_irq
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to pi_irq
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to pi_irq
+set_location_assignment PIN_Y4 -to pi_dbg_ck
+set_instance_assignment -name IO_STANDARD "3.3 V Schmitt Trigger" -to pi_dbg_ck
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to pi_dbg_ck
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to pi_dbg_ck
+set_location_assignment PIN_Y3 -to pi_dbg_di
+set_instance_assignment -name IO_STANDARD "3.3 V Schmitt Trigger" -to pi_dbg_di
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to pi_dbg_di
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to pi_dbg_di
+set_location_assignment PIN_AA2 -to dbg_do
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to dbg_do
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to dbg_do
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to dbg_do
+
+# Lowest drive strength on the pins this design can drive.
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to uio[*]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to req
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4MA -to dbg_do
+
+
+# CLK from the Pico drives the global clock network (CLK wire monitor).
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to pi_clk
+# The chip clock (the divider, or the CLK wire for the torture test) drives
+# the global clock network.
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to clk_mux

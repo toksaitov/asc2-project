@@ -1,0 +1,13 @@
+build/
+db/
+incremental_db/
+*.rpt
+*.summary
+*.done
+*.smsg
+*.qws
+*.jdi
+*.pin
+*.sld
+.stamp-*
+files.qsf

@@ -1,0 +1,78 @@
+Rach2 for Almurut II
+192 KB RAM, 176 free
+$ echo one two three
+one two three
+$ echo one two three > a.txt
+$ cat a.txt
+one two three
+$ cp a.txt b.txt
+$ cat a.txt b.txt > c.txt
+$ cat c.txt
+one two three
+one two three
+$ ls a.txt b.txt c.txt
+      14 a.txt
+      14 b.txt
+      28 c.txt
+$ mv c.txt d.txt
+$ rm a.txt
+$ touch e.txt
+$ ls b.txt d.txt e.txt
+      14 b.txt
+      28 d.txt
+       0 e.txt
+$ ls a.txt c.txt
+ls: cannot find a.txt
+ls: cannot find c.txt
+$ cat < d.txt
+one two three
+one two three
+$ cat > f.txt
+typed text
+more text
+$ cat f.txt
+typed text
+more text
+$ cat < d.txt > g.txt
+$ cat g.txt
+one two three
+one two three
+$ echo > h.txt < d.txt x y
+$ cat h.txt
+x y
+$ cat < b.txt < d.txt > i.txt > j.txt
+$ ls i.txt j.txt
+ls: cannot find i.txt
+      28 j.txt
+$ cp ish copy
+$ ls ish copy
+    7652 ish
+    7652 copy
+$ cat nothing
+cat: cannot print nothing
+$ cp nothing x
+cp: cannot read nothing
+$ mv nothing x
+mv: cannot rename nothing
+$ rm nothing
+rm: cannot remove nothing
+$ cat < nothing
+ish: cannot open a redirection
+$ nothing
+nothing: not found
+$ cd /
+$ cd nowhere
+$ 
+$    echo    spaces   
+spaces
+$ echo typox  fixedd 
+typo fixed
+$ exit
+The first process has ended with the exit code 0
+The network of the scheduler: dot4 and C gave the same sum every time
+No processes are left: 0 page faults repaired, 26 pages free at the least
+
+Goodbye! The shell
+has ended and the
+machine has stopped.
+Reset it to restart.

@@ -1,0 +1,25 @@
+Rach2 for Almurut II
+192 KB RAM, 176 free
+$ ls
+$ cat d.txt f.txt
+one two three
+one two three
+typed text
+more text
+$ touch d.txt
+$ args one two
+3 arguments
+argument 0: [args]
+argument 1: [one]
+argument 2: [two]
+variable 0: [HOME=/]
+variable 1: [PATH=/]
+$ exit
+The first process has ended with the exit code 3
+The network of the scheduler: dot4 and C gave the same sum every time
+No processes are left: 0 page faults repaired, 26 pages free at the least
+
+Goodbye! The shell
+has ended and the
+machine has stopped.
+Reset it to restart.

@@ -1,0 +1,495 @@
+Pad-level netlists extracted from the official KiCad PCB files (retrieved 2026-11-21).
+Format: NET :: REF.PAD(pinfunction)=value [DNP]. DNP = footprint marked do-not-populate.
+Extracted by parsing the (net ...) entry of every pad in the .kicad_pcb file. No KiCad tool was run.
+Companion to tt-devboard.md in the same folder.
+
+=== 1. TT Demoboard v3, rev 3.2 (schematic date 2025-11-12) ===
+Source: https://raw.githubusercontent.com/TinyTapeout/tt-demo-pcb/0277545d/tinytapeout-demo.kicad_pcb
+(commit 0277545d, 2026-01-12, last commit before the rev 3.3 rework). RP2350 is U3 here.
+
+(none) :: FID1.=Fiducial FID2.=Fiducial FID3.=Fiducial J1. J5.L25 J5.L29 J5.L60 J5.R14 J5.R23 J5.R24 J5.R25 J5.R27 J5.R32 J5.R34 J5.R49 J5.R50 J5.S1 J5.S2 U3.
++1V1 :: C29.1=100n C30.1=4.7u C31.1=100n C43.1=4.7u L1.1=3.3u U3.10(DVDD) U3.32(DVDD) U3.51(DVDD) U3.65(VREG_FB)
++3V3 :: C11.2=100n C12.2=10uF C13.2=1uF C18.1=1uF C20.1=100n C21.2=1uF C22.1=100n C23.2=1uF C24.1=100n C25.2=1uF C27.1=100n C32.1=100n C33.1=100n C34.1=100n C35.1=100n C36.1=100n C37.1=100n C38.1=100n C39.1=100n C4.1=22uF C40.1=100n C42.1=4.7u C5.1=100n C8.2=100n J11.12(VCC) J11.6(VCC) J12.12(VCC) J12.6(VCC) J13.12(VCC) J13.6(VCC) J14.32(Pin_32)[DNP] J16.10(Pin_10)[DNP] J5.L1(3v3) J5.R10(3v3) J5.R8(3v3) J8.14(Pin_14)[DNP] J8.2(Pin_2)[DNP] R10.1=1k R12.1=10k R18.1=510 R19.1=10k R29.2=5.1k R3.1=1k R30.2=10k R31.1=10k R4.1=1k R5.1=1k R56.1=10k R59.1=33R R6.1=1k R7.1=1k R8.1=1k R9.1=1k SW3.2(2) U1.2(VO) U3.15(IOVDD) U3.24(IOVDD) U3.29(IOVDD) U3.41(IOVDD) U3.5(IOVDD) U3.50(IOVDD) U3.59(ADC_AVDD) U3.60(IOVDD) U3.64(VREG_VIN) U3.68(USB_OTP_VDD) U3.69(QSPI_IOVDD) U3.76(IOVDD) U4.8(VCC)
+/A :: J14.2(Pin_2)[DNP] J5.L2(anA) R32.2=10M
+/ADC1 :: J16.3(Pin_3)[DNP] U3.52(GPIO41_ADC1)
+/ADC2 :: J16.4(Pin_4)[DNP] U3.53(GPIO42_ADC2)
+/ADC3 :: J16.5(Pin_5)[DNP] U3.54(GPIO43_ADC3)
+/ADC4 :: J16.8(Pin_8)[DNP] U3.55(GPIO44_ADC4)
+/ADC5 :: J16.7(Pin_7)[DNP] U3.56(GPIO45_ADC5)
+/B :: J14.3(Pin_3)[DNP] J5.L4(anB) R34.2=10M
+/BOOT :: R12.2=10k R58.1=0 SW2.2(2) U3.75(QSPI_SS)
+/C :: J14.4(Pin_4)[DNP] J5.L6(anC) R36.1=10M
+/CC1 :: C6.1=33pF[DNP] J1.A5(CC1) R2.1=5.1k
+/CC2 :: C7.1=33pF[DNP] J1.B5(CC2) R1.1=5.1k
+/D :: J14.5(Pin_5)[DNP] J5.L10(anD) R38.1=10M
+/E :: J14.8(Pin_8)[DNP] J5.L12(anE) R40.1=10M
+/F :: J14.7(Pin_7)[DNP] J5.L14(anF) R42.1=10M
+/G :: J14.10(Pin_10)[DNP] J5.L18(anG) R33.2=10M
+/H :: J14.11(Pin_11)[DNP] J5.L20(anH) R35.2=10M
+/J :: J14.12(Pin_12)[DNP] J5.L22(anJ) R37.1=10M
+/K :: J14.13(Pin_13)[DNP] J5.L26(anK) R39.1=10M
+/L :: J14.16(Pin_16)[DNP] J5.L28(anL) R41.1=10M
+/M :: J14.15(Pin_15)[DNP] J5.L30(anM) R43.1=10M
+/N :: J14.18(Pin_18)[DNP] J5.L34(anN) R44.2=10M
+/P :: J14.19(Pin_19)[DNP] J5.L36(anP) R46.2=10M
+/Q :: J14.20(Pin_20)[DNP] J5.L38(anQ) R48.1=10M
+/R :: J14.21(Pin_21)[DNP] J5.L42(anR) R50.1=10M
+/RP2350/ADC6 :: U3.57(GPIO46_ADC6)
+/RP2350/ADC7 :: U3.58(GPIO47_ADC7)
+/RP2350/CLKIN :: C26.1=14pF U3.30(XIN) Y1.1(1)
+/RP2350/CLKO2 :: C28.1=14pF R57.2=1k Y1.3(3)
+/RP2350/CLKOUT :: R57.1=1k U3.31(XOUT)
+/RP2350/FLASH_SS :: R56.2=10k R58.2=0 U4.1(~{CS})
+/RP2350/GPIO12 :: U3.11(GPIO12)
+/RP2350/GPIO13 :: U3.12(GPIO13)
+/RP2350/GPIO15 :: U3.14(GPIO15)
+/RP2350/QSPI_SCK :: U3.71(QSPI_SCLK) U4.6(CLK)
+/RP2350/QSPI_SD0 :: U3.72(QSPI_SD0) U4.5(DI(IO0))
+/RP2350/QSPI_SD1 :: U3.74(QSPI_SD1) U4.2(DO(IO1))
+/RP2350/QSPI_SD2 :: U3.73(QSPI_SD2) U4.3(IO2)
+/RP2350/QSPI_SD3 :: U3.70(QSPI_SD3) U4.7(IO3)
+/RP2350/SWCLK :: U3.33(SWCLK)
+/RP2350/SWDIO :: U3.34(SWDIO)
+/RP2350/USBPi_+ :: R54.2=27 U3.67(USB_DP)
+/RP2350/USBPi_- :: R55.2=27 U3.66(USB_DM)
+/RP2350/VREG_AVDD :: C41.1=4.7u R59.2=33R U3.61(VREG_AVDD)
+/RP2350/VREG_LX :: L1.2=3.3u U3.63(VREG_LX)
+/RPLED :: R60.1=510 U3.9(GPIO11)
+/RP_proj_clk :: R15.1=47R U3.16(GPIO16)
+/RUN :: J7.2(Pin_2)[DNP] U3.35(RUN)
+/S :: J14.24(Pin_24)[DNP] J5.L44(anS) R52.1=10M
+/T :: J14.23(Pin_23)[DNP] J5.L46(anT) R45.2=10M
+/U :: J14.26(Pin_26)[DNP] J5.L50(anU) R47.2=10M
+/V :: J14.27(Pin_27)[DNP] J5.L52(anV) R49.1=10M
+/W :: J14.28(Pin_28)[DNP] J5.L54(anW) R51.1=10M
+/X :: J14.29(Pin_29)[DNP] J5.L58(anX) R53.1=10M
+/man_clk :: C18.2=1uF R14.2=10k R16.1=47k SW3.1(1)
+/mng0 :: J5.R42(mng00) U3.80(GPIO3)
+/mng1 :: J5.R40(mng01) U3.1(GPIO4)
+/mng2 :: J5.R36(mng02) U3.2(GPIO5)
+/mng3 :: J5.R30(mng03) U3.3(GPIO6)
+/mng4 :: J5.R26(mng04) R61.1=10k[DNP] U3.4(GPIO7)
+/mng5 :: J5.R22(mng05) R62.1=10k[DNP] U3.6(GPIO8)
+/mng6 :: J5.R18(mng06) U3.7(GPIO9)
+/mng7 :: J5.R16(mng07) R63.1=10k U3.8(GPIO10)
+/ui_in4 :: J11.7(IO5) J5.L41(ui_in[4]) SW1.12 U3.21(GPIO21)
+/ui_in5 :: J11.8(IO6) J5.L45(ui_in[5]) SW1.11 U3.22(GPIO22)
+/ui_in6 :: J11.9(IO7) J5.L47(ui_in[6]) SW1.10 U3.23(GPIO23)
+/ui_in7 :: J11.10(IO8) J5.L49(ui_in[7]) SW1.9 U3.25(GPIO24)
+/uio4 :: J12.7(IO5) J5.L15(uio[4]) U3.37(GPIO29)
+/uio5 :: J12.8(IO6) J5.L17(uio[5]) U3.38(GPIO30)
+/uio6 :: J12.9(IO7) J5.L21(uio[6]) U3.39(GPIO31)
+/uio7 :: J12.10(IO8) J5.L23(uio[7]) U3.40(GPIO32)
+/uo_out4 :: J13.7(IO5) J5.R9(uo_out[4]) JP5.1(A)=SolderJumper_2_Bridged U3.46(GPIO37)
+/uo_out5 :: J13.8(IO6) J5.R7(uo_out[5]) JP6.1(A)=SolderJumper_2_Bridged U3.47(GPIO38)
+/uo_out6 :: J13.9(IO7) J5.R5(uo_out[6]) JP7.1(A)=SolderJumper_2_Bridged U3.48(GPIO39)
+/uo_out7 :: J13.10(IO8) J5.R3(uo_out[7]) JP8.1(A)=SolderJumper_2_Bridged U3.49(GPIO40_ADC0)
+/vfused :: C1.1=1uF F1.2=350mA FB1.1=120R
+GND :: C1.2=1uF C10.2=33pF[DNP] C11.1=100n C12.1=10uF C13.1=1uF C14.1=10uF C15.1=1uF C16.1=100n C17.2=6800pF[DNP] C19.2=100n C2.2=1uF C20.2=100n C21.1=1uF C22.2=100n C23.1=1uF C24.2=100n C25.1=1uF C26.2=14pF C27.2=100n C28.2=14pF C29.2=100n C3.2=10uF C30.2=4.7u C31.2=100n C32.2=100n C33.2=100n C34.2=100n C35.2=100n C36.2=100n C37.2=100n C38.2=100n C39.2=100n C4.2=22uF C40.2=100n C41.2=4.7u C42.2=4.7u C43.2=4.7u C5.2=100n C6.2=33pF[DNP] C7.2=33pF[DNP] C8.1=100n C9.2=33pF[DNP] D1.1(A1)=TVS D2.1(A1)=TVS D3.1(K)=Yellow D4.1(K)=Yellow D5.1(K)=Yellow J1.A1(GND) J1.A12(GND) J1.B1(GND) J1.B12(GND) J11.11(GND) J11.5(GND) J12.11(GND) J12.5(GND) J13.11(GND) J13.5(GND) J14.1(Pin_1)[DNP] J14.14(Pin_14)[DNP] J14.17(Pin_17)[DNP] J14.22(Pin_22)[DNP] J14.25(Pin_25)[DNP] J14.30(Pin_30)[DNP] J14.31(Pin_31)[DNP] J14.6(Pin_6)[DNP] J14.9(Pin_9)[DNP] J16.1(Pin_1)[DNP] J16.2(Pin_2)[DNP] J16.6(Pin_6)[DNP] J16.9(Pin_9)[DNP] J5.L11(GND) J5.L16(GND) J5.L19(GND) J5.L24(GND) J5.L27(GND) J5.L3(GND) J5.L32(GND) J5.L35(GND) J5.L40(GND) J5.L43(GND) J5.L48(GND) J5.L51(GND) J5.L55(GND) J5.L56(GND) J5.L59(GND) J5.L8(GND) J5.R1(GND) J5.R11(GND) J5.R12(GND) J5.R20(GND) J5.R21(GND) J5.R28(GND) J5.R33(GND) J5.R38(GND) J5.R41(GND) J5.R44(GND) J5.R45(GND) J5.R48(GND) J5.R6(GND) J7.1(Pin_1)[DNP] J8.1(Pin_1)[DNP] J8.13(Pin_13)[DNP] J8.15(Pin_15)[DNP] J8.3(Pin_3)[DNP] J8.7(Pin_7)[DNP] MT1.1(1) MT2.1(1) R1.2=5.1k R11.2=1M[DNP] R13.2=1k R16.2=47k R2.2=5.1k R32.1=10M R33.1=10M R34.1=10M R35.1=10M R36.2=10M R37.2=10M R38.2=10M R39.2=10M R40.2=10M R41.2=10M R42.2=10M R43.2=10M R44.1=10M R45.1=10M R46.1=10M R47.1=10M R48.2=10M R49.2=10M R50.2=10M R51.2=10M R52.2=10M R53.2=10M R61.2=10k[DNP] R62.2=10k[DNP] R63.2=10k STITCH01.1 STITCH10.1 STITCH11.1 STITCH12.1 STITCH13.1 STITCH14.1 STITCH15.1 STITCH16.1 STITCH17.1 STITCH18.1 STITCH19.1 STITCH2.1 STITCH20.1 STITCH21.1 STITCH22.1 STITCH3.1 STITCH4.1 STITCH8.1 STITCH9.1 STITCHSM01.1 SW4.1(1) U1.1(GND) U2.3(CC) U2.8(CC) U3.62(VREG_PGND) U3.81(GND) U4.4(GND) Y1.2(2) Y1.4(4)
+Net-(D3-A) :: D3.2(A)=Yellow R17.2=1.2K
+Net-(D4-A) :: D4.2(A)=Yellow R18.2=510
+Net-(D5-A) :: D5.2(A)=Yellow R60.2=510
+Net-(J1-SHIELD) :: C17.1=6800pF[DNP] J1.S1(SHIELD) R11.1=1M[DNP]
+Net-(J9-Pin_3) :: J9.3(Pin_3)[DNP] JP9.1(A)=SolderJumper_2_Bridged
+Net-(JP1-B) :: JP1.2(B)=SolderJumper_2_Bridged R20.1=510
+Net-(JP2-B) :: JP2.2(B)=SolderJumper_2_Bridged R21.1=510
+Net-(JP3-B) :: JP3.2(B)=SolderJumper_2_Bridged R23.1=510
+Net-(JP4-B) :: JP4.2(B)=SolderJumper_2_Bridged R24.1=510
+Net-(JP5-B) :: JP5.2(B)=SolderJumper_2_Bridged R25.1=510
+Net-(JP6-B) :: JP6.2(B)=SolderJumper_2_Bridged R26.1=510
+Net-(JP7-B) :: JP7.2(B)=SolderJumper_2_Bridged R27.1=510
+Net-(JP8-B) :: JP8.2(B)=SolderJumper_2_Bridged R28.1=510
+Net-(R10-Pad2) :: R10.2=1k SW1.8
+Net-(R13-Pad1) :: R13.1=1k SW2.1(1)
+Net-(R19-Pad2) :: R19.2=10k R22.1=1k SW4.2(2)
+Net-(R3-Pad2) :: R3.2=1k SW1.1
+Net-(R4-Pad2) :: R4.2=1k SW1.2
+Net-(R5-Pad2) :: R5.2=1k SW1.3
+Net-(R6-Pad2) :: R6.2=1k SW1.4
+Net-(R7-Pad2) :: R7.2=1k SW1.5
+Net-(R8-Pad2) :: R8.2=1k SW1.6
+Net-(R9-Pad2) :: R9.2=1k SW1.7
+Net-(U2-A) :: R20.2=510 U2.7(A)
+Net-(U2-B) :: R21.2=510 U2.6(B)
+Net-(U2-C) :: R23.2=510 U2.4(C)
+Net-(U2-D) :: R24.2=510 U2.2(D)
+Net-(U2-DP) :: R28.2=510 U2.5(DP)
+Net-(U2-E) :: R25.2=510 U2.1(E)
+Net-(U2-F) :: R26.2=510 U2.9(F)
+Net-(U2-G) :: R27.2=510 U2.10(G)
+VBUS :: C14.2=10uF C15.2=1uF C16.2=100n C2.1=1uF C3.1=10uF FB1.2=120R J5.R2(VBUS) J5.R4(VBUS) J8.16(Pin_16)[DNP] R17.1=1.2K U1.3(VI)
+VBUSRW :: F1.1=350mA J1.A4(VBUS) J1.A9(VBUS) J1.B4(VBUS) J1.B9(VBUS)
+ctrl_ena :: J5.R46(ctrl_ena) J8.5(Pin_5)[DNP] R30.1=10k U3.77(GPIO0)
+ctrl_sel_inc :: J5.R47(ctrl_inc) J8.4(Pin_4)[DNP] R29.1=5.1k U3.79(GPIO2)
+project_clk :: J5.L57(proj_clk) JP9.2(B)=SolderJumper_2_Bridged R14.1=10k R15.2=47R
+res0 :: J5.R39(RES0) J8.8(Pin_8)[DNP]
+res1 :: J5.R37(RES1) J8.9(Pin_9)[DNP]
+res2 :: J5.R35(RES2) J8.10(Pin_10)[DNP]
+res3 :: J5.R31(RES3) J8.11(Pin_11)[DNP]
+res4 :: J5.R29(RES4) J8.12(Pin_12)[DNP]
+ui_in0 :: J10.1(Pin_1)[DNP] J11.1(IO1) J5.L31(ui_in[0]) SW1.16 U3.17(GPIO17)
+ui_in1 :: J10.2(Pin_2)[DNP] J11.2(IO2) J5.L33(ui_in[1]) SW1.15 U3.18(GPIO18)
+ui_in2 :: J10.3(Pin_3)[DNP] J11.3(IO3) J5.L37(ui_in[2]) SW1.14 U3.19(GPIO19)
+ui_in3 :: J10.4(Pin_4)[DNP] J11.4(IO4) J5.L39(ui_in[3]) SW1.13 U3.20(GPIO20)
+uio0 :: J12.1(IO1) J5.L5(uio[0]) J6.1(Pin_1)[DNP] U3.26(GPIO25)
+uio1 :: J12.2(IO2) J5.L7(uio[1]) J6.2(Pin_2)[DNP] U3.27(GPIO26)
+uio2 :: J12.3(IO3) J5.L9(uio[2]) J6.3(Pin_3)[DNP] U3.28(GPIO27)
+uio3 :: J12.4(IO4) J5.L13(uio[3]) J9.1(Pin_1)[DNP] U3.36(GPIO28)
+unconnected-(J1-SBU1-PadA8) :: J1.A8(SBU1)
+unconnected-(J1-SBU2-PadB8) :: J1.B8(SBU2)
+unconnected-(J2-Pad1) :: J2.1(1)
+unconnected-(J3-Pad1) :: J3.1(1)
+uo_out0 :: J13.1(IO1) J4.1(Pin_1)[DNP] J5.R19(uo_out[0]) JP1.1(A)=SolderJumper_2_Bridged U3.42(GPIO33)
+uo_out1 :: J13.2(IO2) J4.2(Pin_2)[DNP] J5.R17(uo_out[1]) JP2.1(A)=SolderJumper_2_Bridged U3.43(GPIO34)
+uo_out2 :: J13.3(IO3) J4.3(Pin_3)[DNP] J5.R15(uo_out[2]) JP3.1(A)=SolderJumper_2_Bridged U3.44(GPIO35)
+uo_out3 :: J13.4(IO4) J4.4(Pin_4)[DNP] J5.R13(uo_out[3]) JP4.1(A)=SolderJumper_2_Bridged U3.45(GPIO36)
+usb_d+ :: C10.1=33pF[DNP] D2.2(A2)=TVS J1.A6(D+) J1.B6(D+) R54.1=27
+usb_d- :: C9.1=33pF[DNP] D1.2(A2)=TVS J1.A7(D-) J1.B7(D-) R55.1=27
+~{ctrl_sel_rst} :: J5.R43(ctrl_~{rst}) J8.6(Pin_6)[DNP] R31.2=10k U3.78(GPIO1)
+~{project_rst} :: C19.1=100n J5.L53(proj_~{rst}) J9.2(Pin_2)[DNP] R22.2=1k U3.13(GPIO14)
+
+=== 2. TT Demoboard v3, rev 3.3 (schematic date 2026-06-23) ===
+Source: repos/tt-demo-pcb/tinytapeout-demo.kicad_pcb (HEAD bbf3dd1f, 2026-08-29). RP2350 is U6 here.
+Reference designators were re-annotated between 3.2 and 3.3: do not compare refs across revisions.
+
+(none) :: D10.=5VTVS D11.=5VTVS D12.=5VTVS D13.=5VTVS D14.=5VTVS D15.=5VTVS D16.=5VTVS D17.=5VTVS D18.=5VTVS D19.=5VTVS D20.=5VTVS D21.=5VTVS D22.=5VTVS D23.=5VTVS D24.=5VTVS D25.=5VTVS D26.=5VTVS D27.=5VTVS D6.=5VTVS D7.=5VTVS D8.=5VTVS D9.=5VTVS FID1.=Fiducial FID2.=Fiducial FID3.=Fiducial J1. J5.L25 J5.L29 J5.L60 J5.R14 J5.R23 J5.R24 J5.R25 J5.R27 J5.R32 J5.R34 J5.R49 J5.R50 J5.S1 J5.S2 U6.
++1V1 :: C33.1=100n C34.1=4.7u C35.1=100n C47.1=4.7u L1.1=3.3u U6.10(DVDD) U6.32(DVDD) U6.51(DVDD) U6.65(VREG_FB)
++3V3 :: C11.2=100n C12.2=10uF C13.2=1uF C18.1=100n C20.1=100n C21.1=100n C24.1=100n C25.2=1uF C26.1=100n C27.2=1uF C28.1=100n C29.2=1uF C31.1=100n C36.1=100n C37.1=100n C38.1=100n C39.1=100n C4.1=22uF C40.1=100n C41.1=100n C42.1=100n C43.1=100n C44.1=100n C46.1=4.7u C5.1=100n C8.2=100n J12.10(Pin_10)[DNP] J13.32(Pin_32)[DNP] J14.12(VCC) J14.6(VCC) J15.12(VCC) J15.6(VCC) J16.12(VCC) J16.6(VCC) J5.L1(3v3) J5.R10(3v3) J5.R8(3v3) J7.14(Pin_14)[DNP] J7.2(Pin_2)[DNP] R1.1=1k R10.1=1k R12.1=10k R14.1=10k R18.1=510 R25.1=10k R37.2=5.1k R38.2=10k R39.1=10k R4.1=1k R42.1=10k R45.1=33R R5.1=1k R6.1=1k R7.1=1k R8.1=1k R9.1=1k SW4.2(2) U1.2(VO) U2.5(VCC) U3.5(VCC) U5.5(V+) U6.15(IOVDD) U6.24(IOVDD) U6.29(IOVDD) U6.41(IOVDD) U6.5(IOVDD) U6.50(IOVDD) U6.59(ADC_AVDD) U6.60(IOVDD) U6.64(VREG_VIN) U6.68(USB_OTP_VDD) U6.69(QSPI_IOVDD) U6.76(IOVDD) U7.8(VCC)
+/A :: D8.1(A1)=5VTVS J13.2(Pin_2)[DNP] J5.L2(anA)
+/ADC1 :: J12.3(Pin_3)[DNP] U6.52(GPIO41_ADC1)
+/ADC2 :: J12.4(Pin_4)[DNP] U6.53(GPIO42_ADC2)
+/ADC3 :: J12.5(Pin_5)[DNP] U6.54(GPIO43_ADC3)
+/ADC4 :: J12.8(Pin_8)[DNP] U6.55(GPIO44_ADC4)
+/ADC5 :: J12.7(Pin_7)[DNP] U6.56(GPIO45_ADC5)
+/B :: D12.2(A2)=5VTVS J13.3(Pin_3)[DNP] J5.L4(anB)
+/BOOT :: R12.2=10k R44.1=0 SW2.2(2) U6.75(QSPI_SS)
+/C :: D16.2(A2)=5VTVS J13.4(Pin_4)[DNP] J5.L6(anC)
+/CC1 :: C6.1=33pF[DNP] J1.A5(CC1) R3.1=5.1k
+/CC2 :: C7.1=33pF[DNP] J1.B5(CC2) R2.1=5.1k
+/D :: D20.1(A1)=5VTVS J13.5(Pin_5)[DNP] J5.L10(anD)
+/E :: D24.1(A1)=5VTVS J13.8(Pin_8)[DNP] J5.L12(anE)
+/F :: D26.1(A1)=5VTVS J13.7(Pin_7)[DNP] J5.L14(anF)
+/G :: D9.1(A1)=5VTVS J13.10(Pin_10)[DNP] J5.L18(anG)
+/H :: D13.1(A1)=5VTVS J13.11(Pin_11)[DNP] J5.L20(anH)
+/IREF :: J11.2(Pin_2)[DNP] Q1.3(D)=DMG2305UX-7
+/IREFPWM :: R34.2=10k U6.11(GPIO12)
+/J :: D17.1(A1)=5VTVS J13.12(Pin_12)[DNP] J5.L22(anJ)
+/K :: D21.2(A2)=5VTVS J13.13(Pin_13)[DNP] J5.L26(anK)
+/L :: D25.2(A2)=5VTVS J13.16(Pin_16)[DNP] J5.L28(anL)
+/M :: D27.2(A2)=5VTVS J13.15(Pin_15)[DNP] J5.L30(anM)
+/N :: D6.2(A2)=5VTVS J13.18(Pin_18)[DNP] J5.L34(anN)
+/P :: D10.1(A1)=5VTVS J13.19(Pin_19)[DNP] J5.L36(anP)
+/Q :: D14.1(A1)=5VTVS J13.20(Pin_20)[DNP] J5.L38(anQ)
+/R :: D18.1(A1)=5VTVS J13.21(Pin_21)[DNP] J5.L42(anR)
+/RP2350/ADC6 :: U6.57(GPIO46_ADC6)
+/RP2350/ADC7 :: U6.58(GPIO47_ADC7)
+/RP2350/CLKIN :: C30.1=14pF U6.30(XIN) Y1.1(1)
+/RP2350/CLKO2 :: C32.1=14pF R43.2=1k Y1.3(3)
+/RP2350/CLKOUT :: R43.1=1k U6.31(XOUT)
+/RP2350/FLASH_SS :: R42.2=10k R44.2=0 U7.1(~{CS})
+/RP2350/GPIO13 :: U6.12(GPIO13)
+/RP2350/QSPI_SCK :: U6.71(QSPI_SCLK) U7.6(CLK)
+/RP2350/QSPI_SD0 :: U6.72(QSPI_SD0) U7.5(DI(IO0))
+/RP2350/QSPI_SD1 :: U6.74(QSPI_SD1) U7.2(DO(IO1))
+/RP2350/QSPI_SD2 :: U6.73(QSPI_SD2) U7.3(IO2)
+/RP2350/QSPI_SD3 :: U6.70(QSPI_SD3) U7.7(IO3)
+/RP2350/SWCLK :: U6.33(SWCLK)
+/RP2350/SWDIO :: U6.34(SWDIO)
+/RP2350/USBPi_+ :: R40.2=27 U6.67(USB_DP)
+/RP2350/USBPi_- :: R41.2=27 U6.66(USB_DM)
+/RP2350/VREG_AVDD :: C45.1=4.7u R45.2=33R U6.61(VREG_AVDD)
+/RP2350/VREG_LX :: L1.2=3.3u U6.63(VREG_LX)
+/RPLED :: R36.1=510 U6.9(GPIO11)
+/RUN :: J8.2(Pin_2)[DNP] U6.35(RUN)
+/S :: D22.1(A1)=5VTVS J13.24(Pin_24)[DNP] J5.L44(anS)
+/T :: D7.2(A2)=5VTVS J13.23(Pin_23)[DNP] J5.L46(anT)
+/U :: D11.2(A2)=5VTVS J13.26(Pin_26)[DNP] J5.L50(anU)
+/V :: D15.2(A2)=5VTVS J13.27(Pin_27)[DNP] J5.L52(anV)
+/W :: D19.2(A2)=5VTVS J13.28(Pin_28)[DNP] J5.L54(anW)
+/X :: D23.2(A2)=5VTVS J13.29(Pin_29)[DNP] J5.L58(anX)
+/man_clk :: R16.2=0[DNP] U2.4 U6.14(GPIO15)
+/man_clk_trig :: C19.1=1uF R15.2=1k R16.1=0[DNP] U2.2
+/mng0 :: J5.R42(mng00) U6.80(GPIO3)
+/mng1 :: J5.R40(mng01) U6.1(GPIO4)
+/mng2 :: J5.R36(mng02) U6.2(GPIO5)
+/mng3 :: J5.R30(mng03) U6.3(GPIO6)
+/mng4 :: J5.R26(mng04) R29.1=10k[DNP] U6.4(GPIO7)
+/mng5 :: J5.R22(mng05) R31.1=10k[DNP] U6.6(GPIO8)
+/mng6 :: J5.R18(mng06) U6.7(GPIO9)
+/mng7 :: J5.R16(mng07) R33.1=10k U6.8(GPIO10)
+/project_clk :: J5.L57(proj_clk) JP1.1(A)=SolderJumper_2_Bridged U6.16(GPIO16)
+/ui_in4 :: J14.7(IO5) J5.L41(ui_in[4]) SW1.12 U6.21(GPIO21)
+/ui_in5 :: J14.8(IO6) J5.L45(ui_in[5]) SW1.11 U6.22(GPIO22)
+/ui_in6 :: J14.9(IO7) J5.L47(ui_in[6]) SW1.10 U6.23(GPIO23)
+/ui_in7 :: J14.10(IO8) J5.L49(ui_in[7]) SW1.9 U6.25(GPIO24)
+/uio4 :: J15.7(IO5) J5.L15(uio[4]) U6.37(GPIO29)
+/uio5 :: J15.8(IO6) J5.L17(uio[5]) U6.38(GPIO30)
+/uio6 :: J15.9(IO7) J5.L21(uio[6]) U6.39(GPIO31)
+/uio7 :: J15.10(IO8) J5.L23(uio[7]) U6.40(GPIO32)
+/uo_out4 :: J16.7(IO5) J5.R9(uo_out[4]) JP6.1(A)=SolderJumper_2_Bridged U6.46(GPIO37)
+/uo_out5 :: J16.8(IO6) J5.R7(uo_out[5]) JP7.1(A)=SolderJumper_2_Bridged U6.47(GPIO38)
+/uo_out6 :: J16.9(IO7) J5.R5(uo_out[6]) JP8.1(A)=SolderJumper_2_Bridged U6.48(GPIO39)
+/uo_out7 :: J16.10(IO8) J5.R3(uo_out[7]) JP9.1(A)=SolderJumper_2_Bridged U6.49(GPIO40_ADC0)
+/vfused :: C1.1=1uF F1.2=350mA FB1.1=120R
+GND :: C1.2=1uF C10.2=33pF[DNP] C11.1=100n C12.1=10uF C13.1=1uF C14.1=10uF C15.1=1uF C16.1=100n C17.2=6800pF[DNP] C18.2=100n C19.2=1uF C2.2=1uF C21.2=100n C22.2=1uF C23.2=1uF C24.2=100n C25.1=1uF C26.2=100n C27.1=1uF C28.2=100n C29.1=1uF C3.2=10uF C30.2=14pF C31.2=100n C32.2=14pF C33.2=100n C34.2=4.7u C35.2=100n C36.2=100n C37.2=100n C38.2=100n C39.2=100n C4.2=22uF C40.2=100n C41.2=100n C42.2=100n C43.2=100n C44.2=100n C45.2=4.7u C46.2=4.7u C47.2=4.7u C5.2=100n C6.2=33pF[DNP] C7.2=33pF[DNP] C8.1=100n C9.2=33pF[DNP] D1.1(A1)=TVS D10.2(A2)=5VTVS D11.1(A1)=5VTVS D12.1(A1)=5VTVS D13.2(A2)=5VTVS D14.2(A2)=5VTVS D15.1(A1)=5VTVS D16.1(A1)=5VTVS D17.2(A2)=5VTVS D18.2(A2)=5VTVS D19.1(A1)=5VTVS D2.1(A1)=TVS D20.2(A2)=5VTVS D21.1(A1)=5VTVS D22.2(A2)=5VTVS D23.1(A1)=5VTVS D24.2(A2)=5VTVS D25.1(A1)=5VTVS D26.2(A2)=5VTVS D27.1(A1)=5VTVS D3.1(K)=Yellow D4.1(K)=Yellow D5.1(K)=Yellow D6.1(A1)=5VTVS D7.1(A1)=5VTVS D8.2(A2)=5VTVS D9.2(A2)=5VTVS J1.A1(GND) J1.A12(GND) J1.B1(GND) J1.B12(GND) J11.1(Pin_1)[DNP] J12.1(Pin_1)[DNP] J12.2(Pin_2)[DNP] J12.6(Pin_6)[DNP] J12.9(Pin_9)[DNP] J13.1(Pin_1)[DNP] J13.14(Pin_14)[DNP] J13.17(Pin_17)[DNP] J13.22(Pin_22)[DNP] J13.25(Pin_25)[DNP] J13.30(Pin_30)[DNP] J13.31(Pin_31)[DNP] J13.6(Pin_6)[DNP] J13.9(Pin_9)[DNP] J14.11(GND) J14.5(GND) J15.11(GND) J15.5(GND) J16.11(GND) J16.5(GND) J5.L11(GND) J5.L16(GND) J5.L19(GND) J5.L24(GND) J5.L27(GND) J5.L3(GND) J5.L32(GND) J5.L35(GND) J5.L40(GND) J5.L43(GND) J5.L48(GND) J5.L51(GND) J5.L55(GND) J5.L56(GND) J5.L59(GND) J5.L8(GND) J5.R1(GND) J5.R11(GND) J5.R12(GND) J5.R20(GND) J5.R21(GND) J5.R28(GND) J5.R33(GND) J5.R38(GND) J5.R41(GND) J5.R44(GND) J5.R45(GND) J5.R48(GND) J5.R6(GND) J7.1(Pin_1)[DNP] J7.13(Pin_13)[DNP] J7.15(Pin_15)[DNP] J7.3(Pin_3)[DNP] J7.7(Pin_7)[DNP] J8.1(Pin_1)[DNP] MT1.1(1) MT2.1(1) R11.2=1M[DNP] R13.2=1k R2.2=5.1k R27.1=10k R29.2=10k[DNP] R3.2=5.1k R31.2=10k[DNP] R33.2=10k STITCH01.1 STITCH10.1 STITCH11.1 STITCH12.1 STITCH13.1 STITCH14.1 STITCH15.1 STITCH16.1 STITCH17.1 STITCH18.1 STITCH19.1 STITCH2.1 STITCH20.1 STITCH21.1 STITCH22.1 STITCH3.1 STITCH4.1 STITCH8.1 STITCH9.1 STITCHSM01.1 SW3.1(1) U1.1(GND) U2.3 U3.3 U4.3(CC) U4.8(CC) U5.2(V-) U6.62(VREG_PGND) U6.81(GND) U7.4(GND) Y1.2(2) Y1.4(4)
+Net-(C20-Pad2) :: C20.2=100n R22.1=1k R27.2=10k SW4.1(1)
+Net-(C22-Pad1) :: C22.1=1uF R34.1=10k R35.2=10k
+Net-(D3-A) :: D3.2(A)=Yellow R17.2=1.2K
+Net-(D4-A) :: D4.2(A)=Yellow R18.2=510
+Net-(D5-A) :: D5.2(A)=Yellow R36.2=510
+Net-(J1-SHIELD) :: C17.1=6800pF[DNP] J1.S1(SHIELD) R11.1=1M[DNP]
+Net-(JP2-B) :: JP2.2(B)=SolderJumper_2_Bridged R19.1=510
+Net-(JP3-B) :: JP3.2(B)=SolderJumper_2_Bridged R20.1=510
+Net-(JP4-B) :: JP4.2(B)=SolderJumper_2_Bridged R21.1=510
+Net-(JP5-B) :: JP5.2(B)=SolderJumper_2_Bridged R24.1=510
+Net-(JP6-B) :: JP6.2(B)=SolderJumper_2_Bridged R26.1=510
+Net-(JP7-B) :: JP7.2(B)=SolderJumper_2_Bridged R28.1=510
+Net-(JP8-B) :: JP8.2(B)=SolderJumper_2_Bridged R30.1=510
+Net-(JP9-B) :: JP9.2(B)=SolderJumper_2_Bridged R32.1=510
+Net-(Q1-G) :: Q1.1(G)=DMG2305UX-7 U5.1
+Net-(Q1-S) :: Q1.2(S)=DMG2305UX-7 R25.2=10k U5.4(-)
+Net-(R1-Pad2) :: R1.2=1k SW1.1
+Net-(R10-Pad2) :: R10.2=1k SW1.8
+Net-(R13-Pad1) :: R13.1=1k SW2.1(1)
+Net-(R14-Pad2) :: R14.2=10k R15.1=1k SW3.2(2)
+Net-(R22-Pad2) :: R22.2=1k U3.2
+Net-(R23-Pad1) :: R23.1=1k U3.4
+Net-(R4-Pad2) :: R4.2=1k SW1.2
+Net-(R5-Pad2) :: R5.2=1k SW1.3
+Net-(R6-Pad2) :: R6.2=1k SW1.4
+Net-(R7-Pad2) :: R7.2=1k SW1.5
+Net-(R8-Pad2) :: R8.2=1k SW1.6
+Net-(R9-Pad2) :: R9.2=1k SW1.7
+Net-(U4-A) :: R19.2=510 U4.7(A)
+Net-(U4-B) :: R20.2=510 U4.6(B)
+Net-(U4-C) :: R21.2=510 U4.4(C)
+Net-(U4-D) :: R24.2=510 U4.2(D)
+Net-(U4-DP) :: R32.2=510 U4.5(DP)
+Net-(U4-E) :: R26.2=510 U4.1(E)
+Net-(U4-F) :: R28.2=510 U4.9(F)
+Net-(U4-G) :: R30.2=510 U4.10(G)
+Net-(U5-+) :: C23.1=1uF R35.1=10k U5.3(+)
+VBUS :: C14.2=10uF C15.2=1uF C16.2=100n C2.1=1uF C3.1=10uF FB1.2=120R J5.R2(VBUS) J5.R4(VBUS) J7.16(Pin_16)[DNP] R17.1=1.2K U1.3(VI)
+VBUSRW :: F1.1=350mA J1.A4(VBUS) J1.A9(VBUS) J1.B4(VBUS) J1.B9(VBUS)
+ctrl_ena :: J5.R46(ctrl_ena) J7.5(Pin_5)[DNP] R38.1=10k U6.77(GPIO0)
+ctrl_sel_inc :: J5.R47(ctrl_inc) J7.4(Pin_4)[DNP] R37.1=5.1k U6.79(GPIO2)
+ext_project_clk :: J9.3(Pin_3)[DNP] JP1.2(B)=SolderJumper_2_Bridged
+res0 :: J5.R39(RES0) J7.8(Pin_8)[DNP]
+res1 :: J5.R37(RES1) J7.9(Pin_9)[DNP]
+res2 :: J5.R35(RES2) J7.10(Pin_10)[DNP]
+res3 :: J5.R31(RES3) J7.11(Pin_11)[DNP]
+res4 :: J5.R29(RES4) J7.12(Pin_12)[DNP]
+ui_in0 :: J10.1(Pin_1)[DNP] J14.1(IO1) J5.L31(ui_in[0]) SW1.16 U6.17(GPIO17)
+ui_in1 :: J10.2(Pin_2)[DNP] J14.2(IO2) J5.L33(ui_in[1]) SW1.15 U6.18(GPIO18)
+ui_in2 :: J10.3(Pin_3)[DNP] J14.3(IO3) J5.L37(ui_in[2]) SW1.14 U6.19(GPIO19)
+ui_in3 :: J10.4(Pin_4)[DNP] J14.4(IO4) J5.L39(ui_in[3]) SW1.13 U6.20(GPIO20)
+uio0 :: J15.1(IO1) J5.L5(uio[0]) J6.1(Pin_1)[DNP] U6.26(GPIO25)
+uio1 :: J15.2(IO2) J5.L7(uio[1]) J6.2(Pin_2)[DNP] U6.27(GPIO26)
+uio2 :: J15.3(IO3) J5.L9(uio[2]) J6.3(Pin_3)[DNP] U6.28(GPIO27)
+uio3 :: J15.4(IO4) J5.L13(uio[3]) J9.1(Pin_1)[DNP] U6.36(GPIO28)
+unconnected-(J1-SBU1-PadA8) :: J1.A8(SBU1)
+unconnected-(J1-SBU2-PadB8) :: J1.B8(SBU2)
+unconnected-(J2-Pad1) :: J2.1(1)
+unconnected-(J3-Pad1) :: J3.1(1)
+unconnected-(U2-NC-Pad1) :: U2.1(NC)
+unconnected-(U3-NC-Pad1) :: U3.1(NC)
+uo_out0 :: J16.1(IO1) J4.1(Pin_1)[DNP] J5.R19(uo_out[0]) JP2.1(A)=SolderJumper_2_Bridged U6.42(GPIO33)
+uo_out1 :: J16.2(IO2) J4.2(Pin_2)[DNP] J5.R17(uo_out[1]) JP3.1(A)=SolderJumper_2_Bridged U6.43(GPIO34)
+uo_out2 :: J16.3(IO3) J4.3(Pin_3)[DNP] J5.R15(uo_out[2]) JP4.1(A)=SolderJumper_2_Bridged U6.44(GPIO35)
+uo_out3 :: J16.4(IO4) J4.4(Pin_4)[DNP] J5.R13(uo_out[3]) JP5.1(A)=SolderJumper_2_Bridged U6.45(GPIO36)
+usb_d+ :: C10.1=33pF[DNP] D2.2(A2)=TVS J1.A6(D+) J1.B6(D+) R40.1=27
+usb_d- :: C9.1=33pF[DNP] D1.2(A2)=TVS J1.A7(D-) J1.B7(D-) R41.1=27
+~{ctrl_sel_rst} :: J5.R43(ctrl_~{rst}) J7.6(Pin_6)[DNP] R39.2=10k U6.78(GPIO1)
+~{project_rst} :: J5.L53(proj_~{rst}) J9.2(Pin_2)[DNP] R23.2=1k U6.13(GPIO14)
+
+=== 3. SKY130 QFN breakout, PCB rev 3.2 (2025-10-04; schematic title block says 3.1, 2025-12-02) ===
+Source: repos/breakout-pcb/breakout-sky-qfn/breakout-sky-qfn.kicad_pcb (HEAD 91a2bf18, 2026-10-29). Chip is U4.
+J1 = 60-pin DF12 (inputs, uio, clk, rst_n, analog). J3 = 50-pin DF12 (outputs, mux ctrl, mng, power).
+
+(none) :: FID1.=Fiducial[DNP] FID2.=Fiducial[DNP] FID3.=Fiducial[DNP] J1.S1 J1.S2 J3.S1 J3.S2 U3.9[DNP] U3.[DNP] U4.
++3V3 :: J1.1(1) J3.10(10) J3.8(8) R2.1=0 R4.1=0
++5V :: J3.2(2) J3.4(4) R1.1=0[DNP] R3.1=0[DNP]
+/RES1 :: J3.39(39) U4.26(reserved)
+/RES2 :: J3.37(37) U4.27(reserved)
+/RES3 :: J3.35(35) U4.28(reserved)
+/VCIN :: C6.1=10uF R1.2=0[DNP] R2.2=0 R7.1=0[DNP] U1.1(VIN) U1.3(EN)
+/VDIN :: C7.1=10uF R3.2=0[DNP] R4.2=0 R8.1=0 U2.1(VIN)[DNP] U2.3(EN)[DNP]
+/an0 :: J1.6(6) U4.41(analog[0])
+/an1 :: J1.10(10) U4.42(analog[1])
+/an10 :: J1.42(42) U4.15(analog[10])
+/an11 :: J1.38(38) U4.16(analog[11])
+/an2 :: J1.14(14) U4.43(analog[2])
+/an3 :: J1.18(18) U4.44(analog[3])
+/an4 :: J1.22(22) U4.45(analog[4])
+/an5 :: J1.26(26) U4.46(analog[5])
+/an6 :: J1.58(58) U4.11(analog[6])
+/an7 :: J1.54(54) U4.12(analog[7])
+/an8 :: J1.50(50) U4.13(analog[8])
+/an9 :: J1.46(46) U4.14(analog[9])
+/c_ena :: J2.2(Pin_2)[DNP] J3.46(46) R9.1=1k U4.22(ctrl_ena)
+/c_rst_n :: R5.2=0R U4.25(ctrl_sel_rst_n)
+/c_sel_inc :: J2.4(Pin_4)[DNP] J3.47(47) U4.24(ctrl_sel_inc)
+/hd_c_rst_n :: J2.3(Pin_3)[DNP] J3.43(43) R10.1=1k R5.1=0R R6.1=0R[DNP]
+/mngIO0 :: J3.42(42)
+/mngIO1 :: J3.40(40) R11.2=2k[DNP] U3.5(SDA)[DNP]
+/mngIO2 :: J3.36(36) R12.2=2k[DNP] U3.6(SCL)[DNP]
+/mngIO3 :: J3.30(30)
+/mngIO4 :: J3.26(26)
+/mngIO5 :: J3.22(22)
+/mngIO6 :: J3.18(18)
+/mngIO7 :: J3.16(16)
+/p_clk :: J1.57(57) TP2.1(1) U4.50(clk)
+/p_rst :: J1.53(53) TP1.1(1) U4.51(rst_n)
+/res_an16 :: J1.44(44)
+/res_an19 :: J1.52(52)
+/res_extra :: J1.60(60)
+/reserved3 :: J3.31(31)
+/reserved4 :: J3.29(29)
+/reset_b :: R6.2=0R[DNP] U4.21(resetb)
+/uin0 :: J1.31(31) TP4.1(1) U4.31(ui_in[0])
+/uin1 :: J1.33(33) U4.32(ui_in[1])
+/uin2 :: J1.37(37) U4.33(ui_in[2])
+/uin3 :: J1.39(39) U4.34(ui_in[3])
+/uin4 :: J1.41(41) U4.35(ui_in[4])
+/uin5 :: J1.45(45) U4.36(ui_in[5])
+/uin6 :: J1.47(47) U4.37(ui_in[6])
+/uin7 :: J1.49(49) U4.48(ui_in[7])
+/uio0 :: J1.5(5) U4.53(uio[0])
+/uio1 :: J1.7(7) TP3.1(1) U4.54(uio[1])
+/uio2 :: J1.9(9) U4.55(uio[2])
+/uio3 :: J1.13(13) U4.57(uio[3])
+/uio4 :: J1.15(15) U4.58(uio[4])
+/uio5 :: J1.17(17) U4.59(uio[5])
+/uio6 :: J1.21(21) U4.60(uio[6])
+/uio7 :: J1.23(23) U4.61(uio[7])
+/uout0 :: J3.19(19) U4.62(uo_out[0])
+/uout1 :: J3.17(17) U4.2(uo_out[1])
+/uout2 :: J3.15(15) U4.3(uo_out[2])
+/uout3 :: J3.13(13) U4.4(uo_out[3])
+/uout4 :: J3.9(9) U4.5(uo_out[4])
+/uout5 :: J3.7(7) U4.6(uo_out[5])
+/uout6 :: J3.5(5) U4.7(uo_out[6])
+/uout7 :: J3.3(3) U4.8(uo_out[7])
+GND :: ASCGND01.1 C1.2=1uF C10.2=1uF C11.1=100nF C12.2=1uF C13.1=100nF C14.2=1uF C15.2=100nF C16.2=100nF C17.1=100nF C18.2=1uF C19.2=1uF C2.2=1uF C20.1=100nF C21.2=100nF C22.2=100nF C23.2=100nF C24.1=100nF C25.1=100nF C3.2=1uF C4.2=1uF C5.2=1uF C6.2=10uF C7.2=10uF C8.2=1uF C9.1=100nF J1.11(11) J1.12(12) J1.16(16) J1.19(19) J1.2(2) J1.20(20) J1.24(24) J1.27(27) J1.28(28) J1.3(3) J1.30(30) J1.32(32) J1.34(34) J1.35(35) J1.36(36) J1.4(4) J1.40(40) J1.43(43) J1.48(48) J1.51(51) J1.55(55) J1.56(56) J1.59(59) J1.8(8) J2.1(Pin_1)[DNP] J2.10(Pin_10)[DNP] J2.7(Pin_7)[DNP] J3.1(1) J3.11(11) J3.12(12) J3.20(20) J3.21(21) J3.28(28) J3.33(33) J3.38(38) J3.41(41) J3.44(44) J3.45(45) J3.48(48) J3.6(6) R10.2=1k R9.2=1k STICHM01.1 STITCH01.1 STITCH10.1 STITCH11.1 STITCH12.1 STITCH13.1 STITCH14.1 STITCH15.1 STITCH16.1 STITCH2.1 STITCH3.1 STITCH4.1 STITCH5.1 STITCH6.1 STITCH7.1 STITCH8.1 STITCH9.1 U1.2(GND) U2.2(GND)[DNP] U3.1(A0)[DNP] U3.2(A1)[DNP] U3.3(A2)[DNP] U3.4(GND)[DNP] U3.7(WP)[DNP] U4.1(vssa2) U4.10(vssd2) U4.20(vssa) U4.23(vssd) U4.29(vssio) U4.38(vssa1) U4.39(vssd1) U4.52(vssa1) U4.56(vssio) U4.65(ThermalPad)
+VCCD :: C1.1=1uF C20.2=100nF C23.1=100nF C24.2=100nF C3.1=1uF C5.1=1uF J2.6(Pin_6)[DNP] R14.2=0 U4.18(vccd) U4.49(vccd1) U4.63(vccd2)
+VCC_{REG} :: C18.1=1uF C21.1=100nF J2.5(Pin_5)[DNP] R14.1=0 R7.2=0[DNP] U1.5(VOUT)
+VDDA :: C10.1=1uF C11.2=100nF C12.1=1uF C13.2=100nF C14.1=1uF C15.1=100nF C8.1=1uF C9.2=100nF J2.12(Pin_12)[DNP] R15.2=0 U4.30(vdda) U4.40(vdda1) U4.47(vdda1) U4.9(vdda2)
+VDD_{IO} :: C16.1=100nF C17.2=100nF C2.1=1uF C25.2=100nF C4.1=1uF J2.9(Pin_9)[DNP] R11.1=2k[DNP] R12.1=2k[DNP] R13.2=0 U3.8(VCC)[DNP] U4.17(vddio) U4.64(vddio)
+VDD_{REG} :: C19.1=1uF C22.1=100nF J2.11(Pin_11)[DNP] J2.8(Pin_8)[DNP] R13.1=0 R15.1=0 R8.2=0 U2.5(VOUT)[DNP]
+unconnected-(J1-Pad25) :: J1.25(25)
+unconnected-(J1-Pad29) :: J1.29(29)
+unconnected-(J3-Pad14) :: J3.14(14)
+unconnected-(J3-Pad23) :: J3.23(23)
+unconnected-(J3-Pad24) :: J3.24(24)
+unconnected-(J3-Pad25) :: J3.25(25)
+unconnected-(J3-Pad27) :: J3.27(27)
+unconnected-(J3-Pad32) :: J3.32(32)
+unconnected-(J3-Pad34) :: J3.34(34)
+unconnected-(J3-Pad49) :: J3.49(49)
+unconnected-(J3-Pad50) :: J3.50(50)
+unconnected-(U1-NC-Pad4) :: U1.4(NC)
+unconnected-(U2-NC-Pad4) :: U2.4(NC)[DNP]
+unconnected-(U4-NC-Pad19) :: U4.19(NC)
+
+=== 4. GF180 COB breakout, rev 0.2 (2026-10-28) ===
+Source: repos/breakout-pcb/breakout-gf-cob/breakout-gf-cob.kicad_pcb (HEAD 91a2bf18). Chip is U3.
+
+(none) :: FID1.=Fiducial[DNP] FID2.=Fiducial[DNP] FID3.=Fiducial[DNP] J2.S1 J2.S2 J3.S1 J3.S2 U4.9[DNP] U4.[DNP]
++3V3 :: J2.1(1_1) J3.10(10_10) J3.8(8_8) R3.1=0 R7.1=0
++5V :: J3.2(2_2) J3.4(4_4) R1.1=0[DNP] R5.1=0[DNP]
+/RES1 :: J3.39(39_39)
+/RES2 :: J3.37(37_37)
+/RES3 :: J3.35(35_35)
+/VCOREIN :: C1.1=10uF R1.2=0[DNP] R2.1=0 R3.2=0 U1.1(VIN_1)[DNP] U1.3(EN_3)[DNP]
+/VDIN :: C5.1=10uF R5.2=0[DNP] R6.1=0 R7.2=0 U2.1(VIN_1)[DNP] U2.3(EN_3)[DNP]
+/an0 :: J2.2(2_2) U3.20(analog[0]_20)
+/an1 :: J2.4(4_4) U3.21(analog[1]_21)
+/an10 :: J2.28(28_28) U3.32(analog[10]_32)
+/an11 :: J2.30(30_30) U3.33(analog[11]_33)
+/an12 :: J2.34(34_34) U3.59(analog[12]_59)
+/an13 :: J2.36(36_36) U3.60(analog[13]_60)
+/an14 :: J2.38(38_38) U3.61(analog[14]_61)
+/an15 :: J2.42(42_42) U3.62(analog[15]_62)
+/an16 :: J2.44(44_44) U3.65(analog[16]_65)
+/an17 :: J2.46(46_46) U3.66(analog[17]_66)
+/an18 :: J2.50(50_50) U3.67(analog[18]_67)
+/an19 :: J2.52(52_52) U3.68(analog[19]_68)
+/an2 :: J2.6(6_6) U3.22(analog[2]_22)
+/an20 :: J2.54(54_54) U3.69(analog[20]_69)
+/an21 :: J2.58(58_58) U3.70(analog[21]_70)
+/an3 :: J2.10(10_10) U3.23(analog[3]_23)
+/an4 :: J2.12(12_12) U3.24(analog[4]_24)
+/an5 :: J2.14(14_14) U3.25(analog[5]_25)
+/an6 :: J2.18(18_18) U3.28(analog[6]_28)
+/an7 :: J2.20(20_20) U3.29(analog[7]_29)
+/an8 :: J2.22(22_22) U3.30(analog[8]_30)
+/an9 :: J2.26(26_26) U3.31(analog[9]_31)
+/enable :: J1.4(Pin_4_4)[DNP] J3.46(46_46) R11.1=1k U3.1(ctrl_ena_1)
+/increment :: J1.2(Pin_2_2)[DNP] J3.47(47_47) U3.2(ctrl_sel_inc_2)
+/mngIO0 :: J3.42(42_42)
+/mngIO1 :: J3.40(40_40) R12.2=2k[DNP] U4.5(SDA_5)[DNP]
+/mngIO2 :: J3.36(36_36) R13.2=2k[DNP] U4.6(SCL_6)[DNP]
+/mngIO3 :: J3.30(30_30)
+/mngIO4 :: J3.26(26_26)
+/mngIO5 :: J3.22(22_22)
+/mngIO6 :: J3.18(18_18)
+/mngIO7 :: J3.16(16_16)
+/p_clk :: J2.57(57_57) TP1.1(1_1) U3.56(u_clk_56)
+/res_extra :: J2.60(60_60)
+/reserved3 :: J3.31(31_31)
+/reserved4 :: J3.29(29_29)
+/rst_n :: J1.3(Pin_3_3)[DNP] J3.43(43_43) R10.1=1k U3.3(ctrl_sel_rst_n_3)
+/uin0 :: J2.31(31_31) U3.47(ui[0]_47)
+/uin1 :: J2.33(33_33) U3.48(ui[1]_48)
+/uin2 :: J2.37(37_37) U3.49(ui[2]_49)
+/uin3 :: J2.39(39_39) U3.50(ui[3]_50)
+/uin4 :: J2.41(41_41) U3.51(ui[4]_51)
+/uin5 :: J2.45(45_45) U3.52(ui[5]_52)
+/uin6 :: J2.47(47_47) U3.53(ui[6]_53)
+/uin7 :: J2.49(49_49) U3.54(ui[7]_54)
+/uio0 :: J2.5(5_5) TP3.1(1_1) U3.38(uio[0]_38)
+/uio1 :: J2.7(7_7) U3.39(uio[1]_39)
+/uio2 :: J2.9(9_9) U3.40(uio[2]_40)
+/uio3 :: J2.13(13_13) U3.41(uio[3]_41)
+/uio4 :: J2.15(15_15) U3.42(uio[4]_42)
+/uio5 :: J2.17(17_17) U3.43(uio[5]_43)
+/uio6 :: J2.21(21_21) U3.44(uio[6]_44)
+/uio7 :: J2.23(23_23) U3.45(uio[7]_45)
+/uout0 :: J3.19(19_19) U3.10(uo[0]_10)
+/uout1 :: J3.17(17_17) U3.11(uo[1]_11)
+/uout2 :: J3.15(15_15) U3.12(uo[2]_12)
+/uout3 :: J3.13(13_13) U3.13(uo[3]_13)
+/uout4 :: J3.9(9_9) U3.14(uo[4]_14)
+/uout5 :: J3.7(7_7) U3.15(uo[5]_15)
+/uout6 :: J3.5(5_5) U3.16(uo[6]_16)
+/uout7 :: J3.3(3_3) U3.17(uo[7]_17)
+/~{p_rst} :: J2.53(53_53) TP2.1(1_1) U3.55(u_rst_n_55)
+GND :: C1.2=10uF C10.2=1u C11.2=1u C12.2=1u C13.2=1u C14.2=1u C15.1=100nF C16.2=1u C17.2=1u C2.2=10uF C3.2=100nF C4.2=10uF[DNP] C5.2=10uF C6.2=10uF C7.2=100nF C8.2=10uF[DNP] C9.2=10uF[DNP] J1.1(Pin_1_1)[DNP] J1.10(Pin_10_10)[DNP] J1.7(Pin_7_7)[DNP] J2.11(11_11) J2.16(16_16) J2.19(19_19) J2.24(24_24) J2.27(27_27) J2.3(3_3) J2.32(32_32) J2.35(35_35) J2.40(40_40) J2.43(43_43) J2.48(48_48) J2.51(51_51) J2.55(55_55) J2.56(56_56) J2.59(59_59) J2.8(8_8) J3.1(1_1) J3.11(11_11) J3.12(12_12) J3.20(20_20) J3.21(21_21) J3.28(28_28) J3.33(33_33) J3.38(38_38) J3.41(41_41) J3.44(44_44) J3.45(45_45) J3.48(48_48) J3.6(6_6) R10.2=1k R11.2=1k STITCH01.1 STITCH02.1 STITCH03.1 STITCH04.1 STITCH05.1 STITCH06.1 STITCH07.1 STITCH08.1 STITCH09.1 STITCH10.1 STITCH11.1 STITCH12.1 STITCH13.1 STITCH14.1 STITCH15.1 STITCH16.1 STITCH17.1 STITCH18.1 STITCH19.1 STITCH20.1 STITCH21.1 STITCH22.1 STITCH23.1 STITCH24.1 STITCH25.1 STITCH26.1 STITCH27.1 STITCH28.1 STITCH29.1 STITCH30.1 STITCH31.1 STITCH32.1 STITCH33.1 STITCH34.1 STITCH35.1 STITCH36.1 STITCH37.1 STITCH38.1 STITCH39.1 STITCH40.1 STITCH41.1 STITCH42.1 STITCH43.1 STITCH44.1 STITCH45.1 STITCH46.1 STITCH47.1 STITCH48.1 STITCH49.1 STITCH50.1 STITCH51.1 STITCH52.1 STITCH53.1 STITCH54.1 STITCH55.1 STITCH56.1 STITCH57.1 STITCHSM01.1 STITCHSM02.1 STITCHSM03.1 U1.2(GND_2)[DNP] U2.2(GND_2)[DNP] U3.19(GND_IO_19) U3.27(GND_Analog_27) U3.34(GND_Core_34) U3.36(GND_IO_36) U3.46(GND_IO_46) U3.57(GND_IO_57) U3.63(GND_Analog_63) U3.71(GND_Core_71) U3.73(GND_IO_73) U3.75(SUB_75) U3.9(GND_IO_9) U4.1(A0_1)[DNP] U4.2(A1_2)[DNP] U4.3(A2_3)[DNP] U4.4(GND_4)[DNP] U4.7(WP_7)[DNP]
+VAA :: C16.1=1u C17.1=1u C8.1=10uF[DNP] J1.6(Pin_6_6)[DNP] R9.2=0 U3.26(VAA_Analog_26) U3.64(VAA_Analog_64)
+VCORE_{REG} :: C2.1=10uF C3.1=100nF J1.8(Pin_8_8)[DNP] R2.2=0 R4.1=0 U1.5(VOUT_5)[DNP]
+VDD_{CORE} :: C13.1=1u C14.1=1u C4.1=10uF[DNP] J1.9(Pin_9_9)[DNP] R4.2=0 U3.35(VDD_Core_35) U3.72(VDD_Core_72)
+VDD_{IO} :: C10.1=1u C11.1=1u C12.1=1u C15.2=100nF C9.1=10uF[DNP] J1.12(Pin_12_12)[DNP] R12.1=2k[DNP] R13.1=2k[DNP] R8.2=0 U3.18(VDD_IO_18) U3.37(VDD_IO_37) U3.58(VDD_IO_58) U3.74(VDD_IO_74) U4.8(VCC_8)[DNP]
+VIO_{REG} :: C6.1=10uF C7.1=100nF J1.11(Pin_11_11)[DNP] J1.5(Pin_5_5)[DNP] R6.2=0 R8.1=0 R9.1=0 U2.5(VOUT_5)[DNP]
+unconnected-(J2-Pad25) :: J2.25(25_25)
+unconnected-(J2-Pad29) :: J2.29(29_29)
+unconnected-(J3-Pad14) :: J3.14(14_14)
+unconnected-(J3-Pad23) :: J3.23(23_23)
+unconnected-(J3-Pad24) :: J3.24(24_24)
+unconnected-(J3-Pad25) :: J3.25(25_25)
+unconnected-(J3-Pad27) :: J3.27(27_27)
+unconnected-(J3-Pad32) :: J3.32(32_32)
+unconnected-(J3-Pad34) :: J3.34(34_34)
+unconnected-(J3-Pad49) :: J3.49(49_49)
+unconnected-(J3-Pad50) :: J3.50(50_50)
+unconnected-(U1-NC-Pad4) :: U1.4(NC_4)[DNP]
+unconnected-(U2-NC-Pad4) :: U2.4(NC_4)[DNP]
+unconnected-(U3-rsvd@4-Pad4) :: U3.4(rsvd@4_4)
+unconnected-(U3-rsvd@4-Pad4)_1 :: U3.4(rsvd@4_4)
+unconnected-(U3-rsvd@5-Pad5) :: U3.5(rsvd@5_5)
+unconnected-(U3-rsvd@5-Pad5)_1 :: U3.5(rsvd@5_5)
+unconnected-(U3-rsvd@6-Pad6) :: U3.6(rsvd@6_6)
+unconnected-(U3-rsvd@6-Pad6)_1 :: U3.6(rsvd@6_6)
+unconnected-(U3-rsvd@7-Pad7) :: U3.7(rsvd@7_7)
+unconnected-(U3-rsvd@7-Pad7)_1 :: U3.7(rsvd@7_7)
+unconnected-(U3-rsvd@8-Pad8) :: U3.8(rsvd@8_8)
+unconnected-(U3-rsvd@8-Pad8)_1 :: U3.8(rsvd@8_8)

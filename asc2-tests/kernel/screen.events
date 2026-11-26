@@ -1,0 +1,8 @@
+# The presses of the button for `screen.in`, in instructions since the start:
+# one that starts a flight of `burkut`, and a hold of four seconds that ends
+# the game (a press ends the picture of the fallen burkut and starts a second
+# flight first).
+3000000,down
+3000200,up
+4500000,down
+5000000,up

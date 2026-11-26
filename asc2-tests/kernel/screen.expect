@@ -1,0 +1,24 @@
+Rach2 for Almurut II
+192 KB RAM, 176 free
+$ scenes
+scenes of the screen
+text is shown
+a picture is shown
+a film is shown
+frames: 39
+$ burkut
+Burkut: a press of the button is a beat of the wings; hold it for two seconds to end the game
+the flight begins
+the flight is over: score 0, best 0
+the flight begins
+the flight is over: score 0, best 0
+the game is over: best 0
+$ exit
+The first process has ended with the exit code 0
+The network of the scheduler: dot4 and C gave the same sum every time
+No processes are left: 0 page faults repaired, 24 pages free at the least
+
+Goodbye! The shell
+has ended and the
+machine has stopped.
+Reset it to restart.

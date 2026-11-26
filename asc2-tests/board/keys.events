@@ -1,0 +1,8 @@
+# The bytes that the keyboard sends in `keys.s` when the program runs on the
+# emulator: the number of instructions that the program has finished before
+# the byte arrives, and the byte. They are a press and a release of the key
+# A. On the board the monitor of the bridge sends the same bytes.
+
+1000,0x1c
+2000,0xf0
+3000,0x1c

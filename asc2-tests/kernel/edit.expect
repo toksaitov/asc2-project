@@ -1,0 +1,88 @@
+Rach2 for Almurut II
+192 KB RAM, 176 free
+$ ed note
+note: a new file
+a
+first line
+second line
+third line
+.
+,n
+1	first line
+2	second line
+3	third line
+2
+second line
+s/second/2nd/
+2nd line
+1,$s/line/row/g
+third row
+,p
+first row
+2nd row
+third row
+2d
+,n
+1	first row
+2	third row
+1i
+at the top
+.
+$a
+at the end
+.
+,n
+1	at the top
+2	first row
+3	third row
+4	at the end
+=
+4
+3c
+changed
+.
+,p
+at the top
+first row
+changed
+at the end
+q
+?
+w
+40
+q
+$ cat note
+at the top
+first row
+changed
+at the end
+$ ed note
+40
+,n
+1	at the top
+2	first row
+3	changed
+4	at the end
+9p
+?
+xyz
+?
+h
+3      go to line 3
+,p     print all
+2,5n   with numbers
+a i c  add lines; end
+       with a line: .
+2,5d   remove lines
+s/a/b/ put b for a
+w write   q quit
+Q
+$ exit
+The first process has ended with the exit code 0
+The network of the scheduler: dot4 and C gave the same sum every time
+No processes are left: 0 page faults repaired, 17 pages free at the least
+
+Goodbye! The shell
+has ended and the
+machine has stopped.
+Reset it to restart.

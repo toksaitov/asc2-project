@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 356" width="680" height="356" font-family="Arial, Helvetica, sans-serif">
+<defs><marker id="head" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#1f2328"/></marker><marker id="tail" viewBox="0 0 12 12" refX="1" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M12 0 L0 6 L12 12 z" fill="#1f2328"/></marker></defs>
+<rect width="680" height="356" fill="#ffffff"/>
+<text x="33.5" y="46" font-size="22" textLength="112.5" lengthAdjust="spacingAndGlyphs" fill="#1f2328">Logic gates</text>
+<rect x="160" y="24" width="417.6" height="30" fill="#8c959f"/>
+<text x="587.6" y="46" font-size="22" font-weight="bold" textLength="55.0" lengthAdjust="spacingAndGlyphs" fill="#1f2328">7,200</text>
+<text x="56.8" y="92" font-size="22" textLength="89.2" lengthAdjust="spacingAndGlyphs" fill="#1f2328">Flip-flops</text>
+<rect x="160" y="70" width="161.878" height="30" fill="#8c959f"/>
+<text x="331.9" y="92" font-size="22" font-weight="bold" textLength="55.0" lengthAdjust="spacingAndGlyphs" fill="#1f2328">2,791</text>
+<text x="39.7" y="138" font-size="22" textLength="106.3" lengthAdjust="spacingAndGlyphs" fill="#1f2328">Delay cells</text>
+<rect x="160" y="116" width="102.138" height="30" fill="#8c959f"/>
+<text x="272.1" y="138" font-size="22" font-weight="bold" textLength="55.0" lengthAdjust="spacingAndGlyphs" fill="#1f2328">1,761</text>
+<text x="47.0" y="184" font-size="22" textLength="99.0" lengthAdjust="spacingAndGlyphs" fill="#1f2328">Clock tree</text>
+<rect x="160" y="162" width="79.228" height="30" fill="#8c959f"/>
+<text x="249.2" y="184" font-size="22" font-weight="bold" textLength="55.0" lengthAdjust="spacingAndGlyphs" fill="#1f2328">1,366</text>
+<text x="28.7" y="230" font-size="22" textLength="117.3" lengthAdjust="spacingAndGlyphs" fill="#1f2328">Multiplexers</text>
+<rect x="160" y="208" width="69.832" height="30" fill="#8c959f"/>
+<text x="239.8" y="230" font-size="22" font-weight="bold" textLength="55.0" lengthAdjust="spacingAndGlyphs" fill="#1f2328">1,204</text>
+<text x="76.3" y="276" font-size="22" textLength="69.7" lengthAdjust="spacingAndGlyphs" fill="#1f2328">Buffers</text>
+<rect x="160" y="254" width="60.146" height="30" fill="#8c959f"/>
+<text x="230.1" y="276" font-size="22" font-weight="bold" textLength="55.0" lengthAdjust="spacingAndGlyphs" fill="#1f2328">1,037</text>
+<text x="77.5" y="322" font-size="22" textLength="68.5" lengthAdjust="spacingAndGlyphs" fill="#1f2328">Diodes</text>
+<rect x="160" y="300" width="40.6" height="30" fill="#8c959f"/>
+<text x="210.6" y="322" font-size="22" font-weight="bold" textLength="36.7" lengthAdjust="spacingAndGlyphs" fill="#1f2328">700</text>
+<line x1="160" y1="14" x2="160" y2="342" stroke="#59636e" stroke-width="2"/>
+</svg>

@@ -1,0 +1,57 @@
+Rach2 for Almurut II
+192 KB RAM, 176 free
+Welcome to Almurut II
+a 32-bit computer and
+its AI accelerator.
+Type tour for a show,
+ls lists the programs
+$ race
+race: a press of the button goes on; hold it for two seconds to end
+Both sides are written by hand; plain code uses the chip without its array of dot products.
+$ pilot
+pilot: the burkut flies by itself; a press lets you fly, and a hold of two seconds ends the program
+flight 2: 0 pillars, the end of it flown by a person
+flight 3: 0 pillars, the end of it flown by a person
+flight 5: 0 pillars, the end of it flown by a person
+flight 8: 0 pillars, the end of it flown by a person
+flight 9: 0 pillars, the end of it flown by a person
+The burkut flew 10 times, and the neuron learned from 4 crashes. Its best flight passed 0 pillars.
+$ guess
+guess: press the button or do not in every beat; hold it for two seconds to end
+In 6 rounds the chip read the person 2 times: 33 of 100. A coin would be right 50 times of 100.
+$ fence
+fence: a press of the button makes a new field; hold it for two seconds to end
+Field 7: every sheep is inside the three lines and every wolf outside, after 240 looks at an animal.
+$ scope
+scope: a press of the button changes the filter; hold it for two seconds to end
+The filter took 261 samples. For each one the chip multiplied the last twelve samples by the twelve numbers of the filter and added the products, all in one instruction.
+$ sched
+sched: a press of the button makes the neuron forget; hold it for two seconds to end
+The kernel guessed about 116 turns of the programs while sched ran, and 102 guesses were right: 87 of 100. Its neuron learns from every wrong guess.
+$ shapes
+shapes: a press of the button shows the next shape; hold it for two seconds to end
+The cube as lines: 76 pictures a second.
+The cube with filled sides: 34 pictures a second.
+The yurt as lines: 48 pictures a second.
+The yurt with filled sides: 11 pictures a second.
+The burkut as lines: 51 pictures a second.
+The burkut with filled sides: 11 pictures a second.
+$ flight
+flight: a press of the button changes how the land is drawn; hold it for two seconds to end
+The flight over solid land: 12 pictures a second.
+The flight over a land of wire: 20 pictures a second.
+$ film
+film: a press of the button shows the next scene; hold it for two seconds to end
+The film ran for 8 seconds and showed 323 pictures: 40 a second. The land is pictures that the program moves; the burkut and the yurt are models that the chip turned in space for every picture.
+$ mark
+mark: four kinds of work with checked answers; hold the button for two seconds to end
+Mark: 644 points. The processor 243 in 8832 ms, the accelerator 299 in 8573 ms, the system 892 in 4268 ms, the screen 1145 in 2452 ms. 1000 points mean as fast as the first machine of this kind on its board.
+$ exit
+The first process has ended with the exit code 0
+The network of the scheduler: dot4 and C gave the same sum every time
+No processes are left: 0 page faults repaired, 14 pages free at the least
+
+Goodbye! The shell
+has ended and the
+machine has stopped.
+Reset it to restart.

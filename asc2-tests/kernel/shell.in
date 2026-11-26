@@ -1,0 +1,37 @@
+echo one two three
+echo one two three > a.txt
+cat a.txt
+cp a.txt b.txt
+cat a.txt b.txt > c.txt
+cat c.txt
+ls a.txt b.txt c.txt
+mv c.txt d.txt
+rm a.txt
+touch e.txt
+ls b.txt d.txt e.txt
+ls a.txt c.txt
+cat < d.txt
+cat > f.txt
+typed text
+more text
+cat f.txt
+cat < d.txt > g.txt
+cat g.txt
+echo > h.txt < d.txt x y
+cat h.txt
+cat < b.txt < d.txt > i.txt > j.txt
+ls i.txt j.txt
+cp ish copy
+ls ish copy
+cat nothing
+cp nothing x
+mv nothing x
+rm nothing
+cat < nothing
+nothing
+cd /
+cd nowhere
+
+   echo    spaces   
+echo typox fixedd
+exit

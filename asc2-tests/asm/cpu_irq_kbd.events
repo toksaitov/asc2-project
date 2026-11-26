@@ -1,0 +1,14 @@
+# The bytes that the keyboard sends in `cpu_irq_kbd.s`: the number of
+# instructions that the program has finished before the byte arrives, and the
+# byte.
+
+# Two bytes that the handler reads one by one
+150,0x1c
+400,0x32
+
+# Two bytes close together, while the program keeps interrupts off
+700,0x43
+720,0x44
+
+# One byte that arrives while a timer interrupt is waiting too
+1500,0x55

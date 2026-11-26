@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 204" width="680" height="204" font-family="Arial, Helvetica, sans-serif">
+<defs><marker id="head" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#1f2328"/></marker><marker id="tail" viewBox="0 0 12 12" refX="1" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M12 0 L0 6 L12 12 z" fill="#1f2328"/></marker></defs>
+<rect width="680" height="204" fill="#ffffff"/>
+<text x="168.0" y="30" font-size="20" font-weight="bold" textLength="140.0" lengthAdjust="spacingAndGlyphs" fill="#1f2328">the chip sends</text>
+<text x="438.9" y="30" font-size="20" font-weight="bold" textLength="182.3" lengthAdjust="spacingAndGlyphs" fill="#1f2328">the bridge answers</text>
+<text x="44.2" y="66" font-size="22" font-weight="bold" textLength="53.8" lengthAdjust="spacingAndGlyphs" fill="#1f2328">Read</text>
+<text x="22.4" y="90" font-size="20" textLength="75.6" lengthAdjust="spacingAndGlyphs" fill="#59636e">10 bytes</text>
+<rect x="112" y="44" width="84" height="52" fill="#0969da" stroke="#1f2328" stroke-width="3"/>
+<text x="122.9" y="77" font-size="20" textLength="62.3" lengthAdjust="spacingAndGlyphs" fill="#ffffff">header</text>
+<rect x="196" y="44" width="168" height="52" fill="#0969da" stroke="#1f2328" stroke-width="3"/>
+<text x="206.6" y="77" font-size="20" textLength="146.7" lengthAdjust="spacingAndGlyphs" fill="#ffffff">address, 4 bytes</text>
+<line x1="368" y1="70" x2="400" y2="70" stroke="#1f2328" stroke-width="2.5" marker-end="url(#head)"/>
+<rect x="404" y="44" width="84" height="52" fill="#ffffff" stroke="#1f2328" stroke-width="3"/>
+<text x="419.3" y="77" font-size="20" textLength="53.4" lengthAdjust="spacingAndGlyphs" fill="#1f2328">status</text>
+<rect x="488" y="44" width="168" height="52" fill="#ffffff" stroke="#1f2328" stroke-width="3"/>
+<text x="514.7" y="77" font-size="20" textLength="114.5" lengthAdjust="spacingAndGlyphs" fill="#1f2328">data, 4 bytes</text>
+<text x="39.3" y="154" font-size="22" font-weight="bold" textLength="58.7" lengthAdjust="spacingAndGlyphs" fill="#1f2328">Fetch</text>
+<text x="33.5" y="178" font-size="20" textLength="64.5" lengthAdjust="spacingAndGlyphs" fill="#59636e">6 bytes</text>
+<rect x="112" y="132" width="84" height="52" fill="#0969da" stroke="#1f2328" stroke-width="3"/>
+<text x="122.9" y="165" font-size="20" textLength="62.3" lengthAdjust="spacingAndGlyphs" fill="#ffffff">header</text>
+<rect x="204" y="132" width="160" height="52" fill="#ffffff" stroke="#59636e" stroke-width="2.5" stroke-dasharray="8 6"/>
+<text x="234.5" y="165" font-size="20" textLength="98.9" lengthAdjust="spacingAndGlyphs" fill="#59636e">no address</text>
+<line x1="368" y1="158" x2="400" y2="158" stroke="#1f2328" stroke-width="2.5" marker-end="url(#head)"/>
+<rect x="404" y="132" width="84" height="52" fill="#ffffff" stroke="#1f2328" stroke-width="3"/>
+<text x="419.3" y="165" font-size="20" textLength="53.4" lengthAdjust="spacingAndGlyphs" fill="#1f2328">status</text>
+<rect x="488" y="132" width="168" height="52" fill="#ffffff" stroke="#1f2328" stroke-width="3"/>
+<text x="514.7" y="165" font-size="20" textLength="114.5" lengthAdjust="spacingAndGlyphs" fill="#1f2328">data, 4 bytes</text>
+</svg>

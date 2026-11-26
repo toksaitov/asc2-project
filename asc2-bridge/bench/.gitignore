@@ -1,0 +1,7 @@
+firmware/build/
+de10-lite/obj_tb/
+de10-lite/obj_tb.log
+de10-lite/db/
+de10-lite/incremental_db/
+de10-lite/output_files/
+host/results/

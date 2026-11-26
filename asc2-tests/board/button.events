@@ -1,0 +1,7 @@
+# What the push button does in `button.s` on the emulator: the number of
+# instructions that the program has finished before the button moves, and
+# its new level.
+600,down
+800,up
+3000,down
+3200,up

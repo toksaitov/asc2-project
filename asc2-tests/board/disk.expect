@@ -1,0 +1,5 @@
+disk: a sector is written
+disk: the sector reads back
+disk: the end of a command interrupts
+disk: a sector past the end is refused
+disk: done

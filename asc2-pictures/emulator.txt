@@ -1,0 +1,33 @@
+CPU State:                                   Welcome to Almurut II
+ General-Purpose Registers:                  a 32-bit computer and
+  r0: 0x00000000  r4: 0x00000000             its AI accelerator.
+  r1: 0x000f4240  r5: 0x00000000             Type tour for a show,
+  r2: 0x00000018  r6: 0x00000000             ls lists the programs
+  r3: 0x8000149c  r7: 0x00000000             $ ls
+ Special-Purpose Registers:                      7652 ish
+  fp: 0x80000f64  lr: 0x808010e8                 2248 echo
+  sp: 0x80000f64 (kernel mode)                   2580 cat
+  sp: 0x007ffd7c (user mode)                     3084 ls
+  ip: 0x8080112c                                 2672 cp
+  flags: 000010, 0x02                            2324 mv
+         UIOSZC                                  2372 rm
+ Control Registers:                              2464 touch
+  cr0: 0001 (control)                            9284 ed
+       TFSP                                      8704 burkut
+  cr1: 0x8080031c (saved ip)                     5848 scenes
+  cr2: 0x00000000 (fault address)               12208 race
+  cr3: 0x00005000 (top page table)              12712 pilot
+  cr4: 0x00000010 (saved flags)                  9224 guess
+  cr5: 0x00000008 (cause)                       12608 fence
+ Translation Lookaside Buffer:                   8536 scope
+   0: 0x00401000 -> 0x00008000 U-               10648 sched
+   1: 0x00400000 -> 0x00007000 U-               14452 shapes
+   2: 0x007ff000 -> 0x0000a000 UW               11360 flight
+   3: 0x00402000 -> 0x00009000 UW               21352 film
+  >4: empty                                     15344 mark
+   5: empty                                      8376 tour
+   6: empty                                       108 motd
+   7: empty                                  $
+ Internal Data:
+  cycles: 1748426
+

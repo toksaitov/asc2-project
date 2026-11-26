@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 236" width="680" height="236" font-family="Arial, Helvetica, sans-serif">
+<defs><marker id="head" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#1f2328"/></marker><marker id="tail" viewBox="0 0 12 12" refX="1" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M12 0 L0 6 L12 12 z" fill="#1f2328"/></marker></defs>
+<rect width="680" height="236" fill="#ffffff"/>
+<text x="154.0" y="30" font-size="20" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="24.0" lengthAdjust="spacingAndGlyphs" fill="#59636e">31</text>
+<rect x="150" y="40" width="250" height="64" fill="#ffffff" stroke="#1f2328" stroke-width="3"/>
+<text x="220.6" y="66.1" font-size="22" font-weight="bold" textLength="108.8" lengthAdjust="spacingAndGlyphs" fill="#1f2328">immediate</text>
+<text x="245.5" y="91.5" font-size="20" textLength="58.9" lengthAdjust="spacingAndGlyphs" fill="#1f2328">16 bits</text>
+<text x="372.0" y="30" font-size="20" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="24.0" lengthAdjust="spacingAndGlyphs" fill="#59636e">16</text>
+<rect x="400" y="40" width="60" height="64" fill="#ffffff" stroke="#1f2328" stroke-width="3"/>
+<text x="422.1" y="66.1" font-size="22" font-weight="bold" textLength="15.9" lengthAdjust="spacingAndGlyphs" fill="#1f2328">A</text>
+<text x="424.4" y="91.5" font-size="20" textLength="11.1" lengthAdjust="spacingAndGlyphs" fill="#1f2328">4</text>
+<text x="432.0" y="30" font-size="20" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="24.0" lengthAdjust="spacingAndGlyphs" fill="#59636e">12</text>
+<rect x="460" y="40" width="60" height="64" fill="#ffffff" stroke="#1f2328" stroke-width="3"/>
+<text x="482.1" y="66.1" font-size="22" font-weight="bold" textLength="15.9" lengthAdjust="spacingAndGlyphs" fill="#1f2328">B</text>
+<text x="484.4" y="91.5" font-size="20" textLength="11.1" lengthAdjust="spacingAndGlyphs" fill="#1f2328">4</text>
+<text x="504.0" y="30" font-size="20" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="12.0" lengthAdjust="spacingAndGlyphs" fill="#59636e">8</text>
+<rect x="520" y="40" width="150" height="64" fill="#0969da" stroke="#1f2328" stroke-width="3"/>
+<text x="555.9" y="66.1" font-size="22" font-weight="bold" textLength="78.2" lengthAdjust="spacingAndGlyphs" fill="#ffffff">opcode</text>
+<text x="571.1" y="91.5" font-size="20" textLength="47.8" lengthAdjust="spacingAndGlyphs" fill="#ffffff">8 bits</text>
+<text x="654.0" y="30" font-size="20" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="12.0" lengthAdjust="spacingAndGlyphs" fill="#59636e">0</text>
+<text x="38.2" y="80" font-size="22" font-weight="bold" textLength="97.8" lengthAdjust="spacingAndGlyphs" fill="#1f2328">one word</text>
+<text x="28.0" y="153" font-size="20" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="108.0" lengthAdjust="spacingAndGlyphs" fill="#1f2328">add r1 r2</text>
+<rect x="150" y="126" width="250" height="40" fill="#ffffff" stroke="#1f2328" stroke-width="3"/>
+<text x="239.0" y="153" font-size="20" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="72.0" lengthAdjust="spacingAndGlyphs" fill="#1f2328">0x0000</text>
+<rect x="400" y="126" width="60" height="40" fill="#ffffff" stroke="#1f2328" stroke-width="3"/>
+<text x="424.0" y="153" font-size="20" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="12.0" lengthAdjust="spacingAndGlyphs" fill="#1f2328">1</text>
+<rect x="460" y="126" width="60" height="40" fill="#ffffff" stroke="#1f2328" stroke-width="3"/>
+<text x="484.0" y="153" font-size="20" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="12.0" lengthAdjust="spacingAndGlyphs" fill="#1f2328">2</text>
+<rect x="520" y="126" width="150" height="40" fill="#ffffff" stroke="#1f2328" stroke-width="3"/>
+<text x="571.0" y="153" font-size="20" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="48.0" lengthAdjust="spacingAndGlyphs" fill="#1f2328">0x20</text>
+<text x="16.0" y="203" font-size="20" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="120.0" lengthAdjust="spacingAndGlyphs" fill="#1f2328">add 0x4 r2</text>
+<rect x="150" y="176" width="250" height="40" fill="#ffffff" stroke="#1f2328" stroke-width="3"/>
+<text x="239.0" y="203" font-size="20" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="72.0" lengthAdjust="spacingAndGlyphs" fill="#1f2328">0x0004</text>
+<rect x="400" y="176" width="60" height="40" fill="#ffffff" stroke="#1f2328" stroke-width="3"/>
+<text x="424.0" y="203" font-size="20" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="12.0" lengthAdjust="spacingAndGlyphs" fill="#1f2328">0</text>
+<rect x="460" y="176" width="60" height="40" fill="#ffffff" stroke="#1f2328" stroke-width="3"/>
+<text x="484.0" y="203" font-size="20" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="12.0" lengthAdjust="spacingAndGlyphs" fill="#1f2328">2</text>
+<rect x="520" y="176" width="150" height="40" fill="#ffffff" stroke="#1f2328" stroke-width="3"/>
+<text x="571.0" y="203" font-size="20" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="48.0" lengthAdjust="spacingAndGlyphs" fill="#1f2328">0xA0</text>
+</svg>

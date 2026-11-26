@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 675.2 318" width="675.2" height="318" font-family="Arial, Helvetica, sans-serif">
+<defs><marker id="head" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L12 6 L0 12 z" fill="#1f2328"/></marker><marker id="tail" viewBox="0 0 12 12" refX="1" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M12 0 L0 6 L12 12 z" fill="#1f2328"/></marker></defs>
+<rect width="675.2" height="318" fill="#ffffff"/>
+<rect x="1.5" y="1.5" width="672.2" height="315" fill="#ffffff" stroke="#1f2328" stroke-width="2"/>
+<text x="16.0" y="32" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="96.0" lengthAdjust="spacingAndGlyphs" fill="#1f2328">CPU State:</text>
+<text x="448.0" y="32" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="201.6" lengthAdjust="spacingAndGlyphs" fill="#1f2328">Welcome to Almurut II</text>
+<text x="25.6" y="54" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="249.6" lengthAdjust="spacingAndGlyphs" fill="#1f2328">General-Purpose Registers:</text>
+<text x="448.0" y="54" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="201.6" lengthAdjust="spacingAndGlyphs" fill="#1f2328">a 32-bit computer and</text>
+<text x="35.2" y="76" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="134.4" lengthAdjust="spacingAndGlyphs" fill="#1f2328">r0: 0x00000000</text>
+<text x="188.8" y="76" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="134.4" lengthAdjust="spacingAndGlyphs" fill="#1f2328">r4: 0x00000000</text>
+<text x="448.0" y="76" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="182.4" lengthAdjust="spacingAndGlyphs" fill="#1f2328">its AI accelerator.</text>
+<text x="35.2" y="98" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="134.4" lengthAdjust="spacingAndGlyphs" fill="#1f2328">r1: 0x000f4240</text>
+<text x="188.8" y="98" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="134.4" lengthAdjust="spacingAndGlyphs" fill="#1f2328">r5: 0x00000000</text>
+<text x="448.0" y="98" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="201.6" lengthAdjust="spacingAndGlyphs" fill="#1f2328">Type tour for a show,</text>
+<text x="35.2" y="120" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="134.4" lengthAdjust="spacingAndGlyphs" fill="#1f2328">r2: 0x00000018</text>
+<text x="188.8" y="120" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="134.4" lengthAdjust="spacingAndGlyphs" fill="#1f2328">r6: 0x00000000</text>
+<text x="448.0" y="120" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="201.6" lengthAdjust="spacingAndGlyphs" fill="#1f2328">ls lists the programs</text>
+<text x="35.2" y="142" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="134.4" lengthAdjust="spacingAndGlyphs" fill="#1f2328">r3: 0x8000149c</text>
+<text x="188.8" y="142" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="134.4" lengthAdjust="spacingAndGlyphs" fill="#1f2328">r7: 0x00000000</text>
+<text x="448.0" y="142" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="38.4" lengthAdjust="spacingAndGlyphs" fill="#1f2328">$ ls</text>
+<text x="25.6" y="164" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="249.6" lengthAdjust="spacingAndGlyphs" fill="#1f2328">Special-Purpose Registers:</text>
+<text x="486.4" y="164" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="76.8" lengthAdjust="spacingAndGlyphs" fill="#1f2328">7652 ish</text>
+<text x="35.2" y="186" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="134.4" lengthAdjust="spacingAndGlyphs" fill="#1f2328">fp: 0x80000f64</text>
+<text x="188.8" y="186" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="134.4" lengthAdjust="spacingAndGlyphs" fill="#1f2328">lr: 0x808010e8</text>
+<text x="486.4" y="186" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="86.4" lengthAdjust="spacingAndGlyphs" fill="#1f2328">2248 echo</text>
+<text x="35.2" y="208" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="268.8" lengthAdjust="spacingAndGlyphs" fill="#1f2328">sp: 0x80000f64 (kernel mode)</text>
+<text x="486.4" y="208" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="76.8" lengthAdjust="spacingAndGlyphs" fill="#1f2328">2580 cat</text>
+<text x="35.2" y="230" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="249.6" lengthAdjust="spacingAndGlyphs" fill="#1f2328">sp: 0x007ffd7c (user mode)</text>
+<text x="486.4" y="230" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="67.2" lengthAdjust="spacingAndGlyphs" fill="#1f2328">3084 ls</text>
+<text x="35.2" y="252" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="134.4" lengthAdjust="spacingAndGlyphs" fill="#1f2328">ip: 0x8080112c</text>
+<text x="486.4" y="252" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="67.2" lengthAdjust="spacingAndGlyphs" fill="#1f2328">2672 cp</text>
+<text x="35.2" y="274" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="182.4" lengthAdjust="spacingAndGlyphs" fill="#1f2328">flags: 000010, 0x02</text>
+<text x="486.4" y="274" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="67.2" lengthAdjust="spacingAndGlyphs" fill="#1f2328">2324 mv</text>
+<text x="102.4" y="296" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="57.6" lengthAdjust="spacingAndGlyphs" fill="#1f2328">UIOSZC</text>
+<text x="486.4" y="296" font-size="16" font-family="Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace" textLength="67.2" lengthAdjust="spacingAndGlyphs" fill="#1f2328">2372 rm</text>
+</svg>

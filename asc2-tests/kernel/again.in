@@ -1,0 +1,5 @@
+ls
+cat d.txt f.txt
+touch d.txt
+args one two
+exit

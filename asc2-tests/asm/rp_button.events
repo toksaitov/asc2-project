@@ -1,0 +1,13 @@
+# What the push button does in `rp_button.s`: the number of instructions that
+# the program has finished before the button moves, and its new level.
+
+# A press that the program finds by asking
+300,down
+600,up
+
+# A press that wakes the program with an interrupt. It comes soon after the
+# program has gone to sleep: a sleeping program finishes instructions only
+# when the timer wakes it, and on the chip's own time the timer does that
+# once in 16 million clocks.
+700,down
+720,up

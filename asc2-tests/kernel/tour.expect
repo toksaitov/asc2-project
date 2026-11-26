@@ -1,0 +1,60 @@
+Rach2 for Almurut II
+192 KB RAM, 176 free
+Welcome to Almurut II
+a 32-bit computer and
+its AI accelerator.
+Type tour for a show,
+ls lists the programs
+$ tour
+tour: the programs of the showcase one after another; a hold of the button ends a program, and during a card of the tour it ends the tour
+tour 1 of 10: shapes
+shapes: a press of the button shows the next shape; hold it for two seconds to end
+The cube as lines: 76 pictures a second.
+The cube with filled sides: 33 pictures a second.
+The yurt as lines: 48 pictures a second.
+The yurt with filled sides: 11 pictures a second.
+The burkut as lines: 51 pictures a second.
+The burkut with filled sides: 11 pictures a second.
+tour 2 of 10: flight
+flight: a press of the button changes how the land is drawn; hold it for two seconds to end
+The flight over solid land: 13 pictures a second.
+The flight over a land of wire: 21 pictures a second.
+tour 3 of 10: race
+race: a press of the button goes on; hold it for two seconds to end
+Learning: the accelerator did 15296 steps while plain code did 1600. That is 10.0 times faster, with the same answers.
+Thinking: the accelerator gave 12928 answers while plain code gave 8960. That is 1.4 times faster, with the same answers.
+Both sides are written by hand; plain code uses the chip without its array of dot products.
+tour 4 of 10: pilot
+pilot: the burkut flies by itself; a press lets you fly, and a hold of two seconds ends the program
+flight 14: 19 pillars, the best of the neuron so far
+The burkut flew 16 times, and the neuron learned from 15 crashes. Its best flight passed 19 pillars.
+tour 5 of 10: fence
+fence: a press of the button makes a new field; hold it for two seconds to end
+Field 1: every sheep is inside the three lines and every wolf outside, after 290 looks at an animal.
+Field 2: every sheep is inside the three lines and every wolf outside, after 615 looks at an animal.
+Field 3: every sheep is inside the three lines and every wolf outside, after 463 looks at an animal.
+tour 6 of 10: scope
+scope: a press of the button changes the filter; hold it for two seconds to end
+The filter took 499 samples. For each one the chip multiplied the last twelve samples by the twelve numbers of the filter and added the products, all in one instruction.
+tour 7 of 10: guess
+guess: press the button or do not in every beat; hold it for two seconds to end
+In 16 rounds the chip read the person 12 times: 75 of 100. A coin would be right 50 times of 100.
+tour 8 of 10: sched
+sched: a press of the button makes the neuron forget; hold it for two seconds to end
+The kernel guessed about 284 turns of the programs while sched ran, and 270 guesses were right: 95 of 100. Its neuron learns from every wrong guess.
+tour 9 of 10: mark
+mark: four kinds of work with checked answers; hold the button for two seconds to end
+Mark: 643 points. The processor 243 in 8825 ms, the accelerator 299 in 8575 ms, the system 893 in 4260 ms, the screen 1138 in 2466 ms. 1000 points mean as fast as the first machine of this kind on its board.
+tour 10 of 10: film
+film: a press of the button shows the next scene; hold it for two seconds to end
+The film ran for 59 seconds and showed 1663 pictures: 28 a second. The land is pictures that the program moves; the burkut and the yurt are models that the chip turned in space for every picture.
+The tour showed 10 of 10 programs. Every one of them starts by its name from the shell.
+$ exit
+The first process has ended with the exit code 0
+The network of the scheduler: dot4 and C gave the same sum every time
+No processes are left: 0 page faults repaired, 7 pages free at the least
+
+Goodbye! The shell
+has ended and the
+machine has stopped.
+Reset it to restart.

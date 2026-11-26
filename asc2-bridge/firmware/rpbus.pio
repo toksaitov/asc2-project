@@ -1,0 +1,76 @@
+; The bridge's side of the bus: the handshake of one byte, in PIO.
+;
+; asc2-kb/bus-protocol-v1.md describes the bus. Every change of REQ is one
+; event. For each event the state machine:
+;
+; 1. takes one command word from the TX FIFO. It waits here, and so holds
+;    the chip, until core 1 has decided what to answer;
+; 2. waits until REQ has its new level and still has it 3 cycles later, so
+;    that a pulse shorter than 20 ns at 150 MHz is not an event. REQ does
+;    not change again before the ACK below, so an early change is not lost;
+; 3. samples uio and pushes the byte to the RX FIFO;
+; 4. drives a byte or releases uio, as the command says;
+; 5. changes ACK.
+;
+; Command word (OUT shifts right):
+;   [7:0]   the byte to drive
+;   [8]     1 to drive, 0 to receive or to release
+;   [16:9]  the directions of the uio pins: 0xff to drive, 0 otherwise
+;
+; Pins:
+;   IN and OUT base  uio[0], 8 pins; REQ is IN pin 8
+;   SET base         ACK
+;   side-set         high while the bridge drives uio
+;   JMP pin          high while the chip drives uio
+;
+; Before the state machine turns its outputs on, it looks at the pin on
+; which the chip says that it drives. If the chip does, the state machine
+; releases uio, raises PIO interrupt 0, and stops. On the second byte of an
+; answer its outputs are on already, so it must turn them off itself.
+;
+; When the chip goes quiet in the middle of a transaction, core 1 stops the
+; state machine, releases uio, and starts it again at `rise` or at `fall`,
+; whichever fits the level of REQ, so that the next change of REQ is a
+; header.
+
+.program rpbus
+.side_set 1 opt
+
+.wrap_target
+public rise:
+    pull block
+    wait 1 pin 8 [2]
+    wait 1 pin 8
+    in pins, 8
+    out pins, 8
+    out x, 1
+    jmp !x rise_release
+    jmp pin violation
+    out pindirs, 8 side 1 [3]    ; the byte settles before ACK changes
+    set pins, 1
+    jmp fall
+rise_release:
+    out pindirs, 8 side 0 [1]
+    set pins, 1
+public fall:
+    pull block
+    wait 0 pin 8 [2]
+    wait 0 pin 8
+    in pins, 8
+    out pins, 8
+    out x, 1
+    jmp !x fall_release
+    jmp pin violation
+    out pindirs, 8 side 1 [3]
+    set pins, 0
+    jmp rise
+fall_release:
+    out pindirs, 8 side 0 [1]
+    set pins, 0
+.wrap
+violation:
+    mov osr, null                ; the byte and its directions are all zeros
+    out pindirs, 8 side 0
+    irq nowait 0
+halt:
+    jmp halt
